@@ -145,15 +145,6 @@ body::after{
 /* cascade d'entrée pour les grilles (services, portfolio, catégories) —
    le délai est posé par élément via nth-child (grilles statiques) ou inline
    par JS (grilles rendues dynamiquement au routing) */
-.services-grid .service-card.reveal{transition-delay:calc(var(--i, 0) * 70ms);}
-.services-grid .service-card:nth-child(1){--i:1;}
-.services-grid .service-card:nth-child(2){--i:2;}
-.services-grid .service-card:nth-child(3){--i:3;}
-.services-grid .service-card:nth-child(4){--i:4;}
-.services-grid .service-card:nth-child(5){--i:5;}
-.services-grid .service-card:nth-child(6){--i:6;}
-.services-grid .service-card:nth-child(7){--i:7;}
-.services-grid .service-card:nth-child(8){--i:8;}
 
 .about-timeline .about-step.reveal{transition-delay:calc(var(--i, 0) * 90ms);}
 .about-timeline .about-step:nth-child(1){--i:1;}
@@ -388,6 +379,18 @@ body::after{
    conservées, légèrement saturées et contrastées, assombries pour la lisibilité. */
 .coverage-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.05) contrast(1.08) brightness(.72);transition:transform 1.2s var(--ease-cine),filter .6s var(--ease);}
 .coverage-slide:hover .coverage-slide-bg{transform:scale(1.07);filter:saturate(1.1) contrast(1.06) brightness(.85);}
+/* au survol, le monogramme/logo de l'agence apparaît en filigrane en haut de
+   la tuile, sans recouvrir le titre et le bouton situés en bas. */
+.coverage-slide-logo{
+  position:absolute;top:18px;right:18px;z-index:2;width:38%;height:64px;
+  background:url('../assets/brand/logo-cream.svg') top right/contain no-repeat;
+  opacity:0;transform:translateY(-6px);
+  transition:opacity .5s var(--ease),transform .6s var(--ease-cine);
+  pointer-events:none;
+}
+.coverage-slide:hover .coverage-slide-logo,
+.coverage-slide:focus-visible .coverage-slide-logo{opacity:.92;transform:translateY(0);}
+@media(prefers-reduced-motion:reduce){.coverage-slide-logo{transition:none;}}
 .coverage-slide-shade{position:absolute;inset:0;background:linear-gradient(180deg, rgba(17,17,17,0) 30%, rgba(17,17,17,.55) 68%, rgba(17,17,17,.88) 100%);}
 .coverage-slide-content{position:absolute;left:26px;right:26px;bottom:28px;z-index:2;transition:transform .6s var(--ease-cine);}
 .coverage-slide:hover .coverage-slide-content{transform:translateY(-6px);}
@@ -949,64 +952,66 @@ body::after{
   .svc-arrow{display:none;}
 }
 
-.services-grid{
-  max-width:1300px;margin:0 auto;display:grid;
-  grid-template-columns:repeat(4,1fr);gap:26px;
-}
 
-.service-card{
-  border-radius:18px;overflow:hidden;background:var(--surface);
-  box-shadow:0 1px 2px rgba(17,17,17,.04);
-  transition:transform .55s var(--ease-cine),box-shadow .55s var(--ease-cine);
+/* home-about — court bloc « qui je suis » sur la landing, entre Services et
+   le process. Fond sombre éditorial : récit condensé à gauche, portrait à
+   droite, signature + lien vers la page À propos complète. */
+.home-about{background:var(--bg);padding:clamp(76px,8vw,112px) 8vw;position:relative;}
+.home-about-inner{
+  max-width:1120px;margin:0 auto;display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(40px,6vw,80px);align-items:center;
 }
-/* ombre portée en deux couches : un halo doux large + un contact rapproché,
-   qui décollent la carte du fond avec la douceur d'un objet posé, pas d'un
-   bloc qui saute. */
-.service-card:hover{transform:translateY(-8px);box-shadow:0 2px 6px rgba(17,17,17,.06),0 30px 60px -20px rgba(17,17,17,.28);}
-
-.service-card-media{position:relative;aspect-ratio:4/3;overflow:hidden;}
-.service-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.05) contrast(1.08) brightness(.72);transition:transform 1.1s var(--ease-cine),filter .55s var(--ease);}
-.service-card:hover .service-card-bg{transform:scale(1.09);filter:saturate(1.1) contrast(1.06) brightness(.85);}
-.service-card-shade{position:absolute;inset:0;background:linear-gradient(180deg, rgba(17,17,17,.02) 45%, rgba(17,17,17,.55) 100%);}
-
-.service-card-icon{
-  position:absolute;left:14px;bottom:14px;z-index:2;width:42px;height:42px;border-radius:50%;
-  background:var(--accent);color:#111;display:flex;align-items:center;justify-content:center;
-  font-size:15px;box-shadow:0 10px 22px rgba(232,89,12,.35);
-  transition:transform .45s var(--ease);
+.home-about-text h2{
+  font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.2vw,40px);
+  line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:22px;
 }
-.service-card:hover .service-card-icon{transform:scale(1.08) rotate(-8deg);}
-.service-card-icon .service-icon{width:18px;height:18px;}
-
-.service-card-body{padding:20px 20px 24px;background:var(--ivoire);}
-.service-card-index{
-  font-family:var(--font-display);font-weight:700;font-size:11px;
-  letter-spacing:1.5px;color:var(--accent);
+.home-about-text h2 span{color:var(--accent);}
+.home-about-text p{color:var(--ink-muted);font-size:15px;line-height:1.8;margin-bottom:16px;max-width:60ch;}
+.home-about-text p strong{color:var(--ink);font-weight:600;}
+/* pied : signature à gauche, lien à droite, séparés par une hairline. */
+.home-about-foot{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
+  margin-top:30px;padding-top:24px;border-top:1px solid var(--line);
 }
-.service-card-body h3{
-  font-family:var(--font-display);font-weight:600;font-size:16.5px;
-  color:var(--noir);margin-top:8px;
+.home-about-sign{display:flex;flex-direction:column;gap:3px;}
+.home-about-sign-name{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:-.01em;}
+.home-about-sign-role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);}
+.home-about-link{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);
+  border-bottom:1px solid var(--accent);padding-bottom:3px;transition:gap .35s var(--ease-cine),color .3s var(--ease);
 }
-.service-card-body p{
-  margin-top:8px;font-size:12.5px;line-height:1.6;color:var(--gris);
-  overflow:hidden;max-height:4.8em; /* ≈ 3 lignes au repos */
-  transition:max-height .55s var(--ease-cine);
+.home-about-link:hover{gap:15px;color:var(--accent);}
+.home-about-portrait{
+  margin:0;position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;
+  background:var(--surface);box-shadow:0 34px 66px -28px rgba(0,0,0,.6);
 }
-/* au survol, le descriptif se déploie en douceur (hauteur animée, pas de saut) */
-.service-card:hover .service-card-body p,
-.service-card:focus-within .service-card-body p{
-  max-height:16em;
+.home-about-portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(247,238,215,.12);border-radius:18px;pointer-events:none;}
+.home-about-img{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  filter:saturate(1.05) contrast(1.08) brightness(.72);
+  transition:transform 1.6s var(--ease-cine);
 }
-@media(prefers-reduced-motion:reduce){
-  .service-card-body p{transition:none;}
+.home-about-inner:hover .home-about-img{transform:scale(1.04);}
+/* au survol du portrait, le logo de l'agence apparaît en filigrane par-dessus. */
+.home-about-logo{
+  position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;
+  background:rgba(17,17,17,.5);opacity:0;transition:opacity .55s var(--ease);
 }
-
-@media(max-width:1000px){
-  .services-grid{grid-template-columns:repeat(2,1fr);}
+.home-about-logo::after{
+  content:"";width:56%;height:56%;
+  background:url('../assets/brand/logo-cream.svg') center/contain no-repeat;
+  transform:scale(.9);transition:transform .6s var(--ease-cine);
 }
-@media(max-width:560px){
-  .services-grid{grid-template-columns:1fr;gap:20px;}
+.home-about-portrait:hover .home-about-logo{opacity:1;}
+.home-about-portrait:hover .home-about-logo::after{transform:scale(1);}
+@media(prefers-reduced-motion:reduce){.home-about-logo,.home-about-logo::after{transition:none;}}
+@media(max-width:860px){
+  .home-about-inner{grid-template-columns:1fr;gap:32px;}
+  .home-about-portrait{order:-1;max-width:300px;}
 }
+@media(prefers-reduced-motion:reduce){.home-about-img{transition:none;}}
 
 /* studio */
 .studio{padding-bottom:70px;}
@@ -1105,6 +1110,12 @@ body::after{
 .modal-media{height:min(50vh,420px);background:linear-gradient(160deg,#202020,#131313);display:flex;align-items:center;justify-content:center;}
 .modal-media i{font-size:22px;width:64px;height:64px;border:1px solid var(--ink-muted);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink);}
 .modal-media iframe,.modal-media video{width:100%;height:100%;border:0;display:block;object-fit:contain;background:#000;}
+.modal-media img{width:100%;height:100%;display:block;object-fit:contain;background:#000;}
+/* galerie de série photo : défilement horizontal, une image calée par écran */
+.modal-gallery{display:flex;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;background:#000;}
+.modal-gallery img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:center;}
+.modal-gallery::-webkit-scrollbar{height:6px;}
+.modal-gallery::-webkit-scrollbar-thumb{background:rgba(247,238,215,.3);border-radius:3px;}
 
 /* carte projet sans lecteur intégré (ex. reel Instagram) : lien externe direct */
 .project-card-thumb-external{display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#2a1a3d,#1b1030);}

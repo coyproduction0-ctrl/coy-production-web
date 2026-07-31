@@ -4,13 +4,34 @@
    modification de code n'est nécessaire. */
 
 const CATEGORIES = [
-  { slug: 'entreprise-marques', label: 'Entreprise & Marques', cover: 'assets/img/entreprise-cover.jpg' },
+  { slug: 'entreprise-marques', label: 'Entreprise & Marques', cover: 'assets/img/matcha.jpg' },
   { slug: 'sport', label: 'Sport', cover: 'assets/img/sport-cover.jpg' },
   { slug: 'createurs', label: 'Créateurs', cover: 'assets/img/createurs-cover.jpg' },
-  { slug: 'particuliers', label: 'Particuliers', cover: 'https://images.unsplash.com/photo-1756982477754-2c05a288f4db?auto=format&fit=crop&w=1400&q=80' },
+  { slug: 'particuliers', label: 'Particuliers', cover: 'assets/img/particuliers-cover.jpg' },
 ];
 
 const PROJECTS = [
+  {
+    title: 'Riodesol — Campagne maillots de bain', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Riodesol',
+    desc: "Série de visuels de campagne pour la marque de maillots de bain Riodesol, capturée en lumière naturelle de fin de journée pour un rendu solaire et éditorial.",
+    thumb: 'assets/img/riodesol.jpg',
+    gallery: ['assets/img/riodesol.jpg','assets/img/riodesol-2.jpg','assets/img/riodesol-3.jpg','assets/img/riodesol-4.jpg','assets/img/riodesol-5.jpg'],
+  },
+  {
+    title: 'Devine le joueur pro !', category: 'createurs',
+    client: 'Créateurs · BR10 — vidéo YouTube',
+    desc: "Format de jeu tourné avec plusieurs créateurs invités, pensé pour l'engagement et le partage sur les réseaux.",
+    thumb: 'https://i.ytimg.com/vi/tNCyoM-T2DE/hqdefault.jpg',
+    youtubeId: 'tNCyoM-T2DE',
+  },
+  {
+    title: 'Villa à Bali — Photos pour Airbnb', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Location saisonnière',
+    desc: "Reportage photo complet d'une villa balinaise destinée à la location Airbnb : pièces de vie, cuisine, chambres et terrasse avec piscine, cadrées en lumière naturelle pour donner envie de réserver dès la première image de l'annonce.",
+    thumb: 'assets/img/villa-bali-1.jpg',
+    gallery: ['assets/img/villa-bali-1.jpg','assets/img/villa-bali-2.jpg','assets/img/villa-bali-3.jpg','assets/img/villa-bali-4.jpg','assets/img/villa-bali-5.jpg','assets/img/villa-bali-6.jpg','assets/img/villa-bali-7.jpg','assets/img/villa-bali-8.jpg'],
+  },
   {
     title: 'Je me qualifie pour Roland Garros à Abidjan ?', category: 'sport',
     client: 'Sport · Florent Bax — vlog tournoi',
@@ -19,11 +40,132 @@ const PROJECTS = [
     youtubeId: 'xpRlK8qydS4',
   },
   {
+    title: 'Lancement de formation — Shooting studio', category: 'createurs',
+    client: 'Créateurs · Studio',
+    desc: "Séance photo en studio pour une créatrice de contenu, à l'occasion du lancement de sa formation : direction artistique soignée, fond neutre et univers premium pour habiller l'ensemble de ses supports de communication.",
+    thumb: 'assets/img/formation-studio.jpg',
+    gallery: ['assets/img/formation-studio.jpg','assets/img/formation-2.jpg','assets/img/formation-3.jpg','assets/img/formation-4.jpg','assets/img/formation-5.jpg','assets/img/formation-6.jpg'],
+  },
+  {
+    title: 'BR10 — Publicité', category: 'createurs',
+    client: 'Créateurs · Film publicitaire',
+    desc: 'Film publicitaire réalisé pour BR10.',
+    thumb: 'assets/video/br10-poster.jpg',
+    videoSrc: 'assets/video/br10-pub.mp4',
+  },
+  {
+    title: 'Shooting produit — Marque de matcha', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Matcha',
+    desc: "Shooting photo produit et lifestyle pour une marque de matcha : direction artistique colorée et lumière travaillée pour des visuels prêts à l'emploi sur les réseaux et l'e-commerce.",
+    thumb: 'assets/img/matcha.jpg',
+    gallery: ['assets/img/matcha.jpg','assets/img/matcha-3.jpg','assets/img/matcha-7.jpg','assets/img/matcha-6.jpg','assets/img/matcha-5.jpg','assets/img/matcha-4.jpg','assets/img/matcha-social.jpg'],
+  },
+  {
+    title: 'Château de Chantilly — Vidéo de présentation', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Château de Chantilly',
+    desc: "Vidéo de présentation aérienne réalisée pour le site internet du Château de Chantilly : un survol du domaine et de ses jardins à la française en lumière de fin de journée, pour donner envie de le découvrir.",
+    thumb: 'assets/video/chantilly-poster.jpg',
+    videoSrc: 'assets/video/chantilly.mp4',
+  },
+  {
+    title: 'Challenger de Rennes — Couverture du tournoi', category: 'sport',
+    client: 'Sport · ATP Challenger de Rennes',
+    desc: "Couverture photo du tournoi ATP Challenger de Rennes : les matchs au plus près du court, mais aussi la scénographie du tournoi, comme l'entrée des joueurs sous les lumières et la fumée.",
+    thumb: 'assets/img/tennis-indoor.jpg',
+    gallery: ['assets/img/tennis-indoor.jpg','assets/img/rennes-2.jpg','assets/img/rennes-3.jpg'],
+  },
+  {
+    title: 'Nos pires unpopular opinions', category: 'createurs',
+    client: 'Créateurs · BR10 — vidéo YouTube',
+    desc: "Format d'échange à plusieurs voix avec FrankoEnDetente, Klemo et Aficionado, pensé pour la complicité et le partage entre créateurs.",
+    thumb: 'https://i.ytimg.com/vi/IHF-Bz-26Xc/hqdefault.jpg',
+    youtubeId: 'IHF-Bz-26Xc',
+  },
+  {
+    title: 'Exposition Cléopâtre — Grand Palais', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Culture & musées',
+    desc: "Couverture photo de l'exposition Cléopâtre au Grand Palais : sculptures, pièces de haute couture et installations captées en lumière de scénographie, pour restituer l'atmosphère du parcours et alimenter la communication de l'exposition.",
+    thumb: 'assets/img/cleopatre-1.jpg',
+    gallery: ['assets/img/cleopatre-1.jpg', 'assets/img/cleopatre-2.jpg', 'assets/img/cleopatre-3.jpg'],
+  },
+  {
+    title: 'Florent Bax — Teaser de lancement', category: 'sport',
+    client: 'Sport · Florent Bax — annonce chaîne YouTube',
+    desc: "Teaser d'annonce du lancement de la chaîne YouTube de Florent Bax : un film court et rythmé, pensé pour créer l'attente avant la toute première vidéo.",
+    thumb: 'assets/video/flobax-teaser-poster.jpg',
+    videoSrc: 'assets/video/flobax-teaser.mp4',
+  },
+  {
+    title: 'Orphelinats de Bali — Campagne de sensibilisation', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Association',
+    desc: "Campagne de sensibilisation photo pour des orphelinats balinais : une série de portraits lumineux et dignes, pensée pour raconter le quotidien des enfants et soutenir les actions de l'association auprès de ses donateurs.",
+    thumb: 'assets/img/bali-orphelinat-1.jpg',
+    gallery: ['assets/img/bali-orphelinat-1.jpg', 'assets/img/bali-orphelinat-2.jpg', 'assets/img/bali-orphelinat-3.jpg'],
+  },
+  {
     title: "Premier titre de l'année !", category: 'sport',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Un titre décroché et raconté de l'intérieur, de l'échauffement à la remise des trophées.",
     thumb: 'https://i.ytimg.com/vi/d4K7qenk1Q0/hqdefault.jpg',
     youtubeId: 'd4K7qenk1Q0',
+  },
+  {
+    title: 'Croisière au Komodo — Campagne publicitaire', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Croisière Komodo',
+    desc: "Campagne publicitaire pour une croisière dans l'archipel de Komodo : lumière dorée de fin de journée et cadrages larges pour vendre l'évasion et une expérience de voyage haut de gamme.",
+    thumb: 'assets/img/komodo-croisiere.jpg',
+  },
+  {
+    title: 'Acalapati — Film de marque', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Acalapati',
+    desc: "Film de marque lifestyle pour Acalapati : une esthétique solaire et premium au service de l'univers de la marque, pensée pour ses réseaux et sa communication.",
+    thumb: 'assets/video/acalapati-poster.jpg',
+    videoSrc: 'assets/video/acalapati.mp4',
+  },
+  {
+    title: 'Hôtellerie urbaine — Jakarta', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Immobilier & hôtellerie',
+    desc: "Série photo pour l'hôtellerie haut de gamme à Jakarta : rooftops, piscines à débordement et skyline au coucher du soleil, pour vendre une expérience autant qu'une chambre.",
+    thumb: 'assets/img/jakarta-rooftop.jpg',
+  },
+  {
+    title: 'Arconit — Film de marque', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Arconit',
+    desc: "Film de marque pour Arconit : mettre en image le savoir-faire et la précision de l'atelier, monté comme un manifeste industriel court, rythmé et haut de gamme.",
+    thumb: 'assets/video/arconit-poster.jpg',
+    videoSrc: 'assets/video/arconit.mp4',
+  },
+  {
+    title: 'Éco-lodge à Bali — Visite en images', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Hôtellerie',
+    desc: "Reportage photo pour un éco-lodge en bambou niché dans la jungle balinaise : architecture, piscines et végétation, mis en image pour le site et les plateformes de réservation.",
+    thumb: 'assets/img/ecolodge.jpg',
+  },
+  {
+    title: 'Paul & Pauline — Film de mariage', category: 'particuliers',
+    client: 'Particuliers · Mariage',
+    desc: "Teaser du mariage de Pauline & Paul : les alliances, la cérémonie, les retrouvailles et la fête, condensés en un film court et émouvant, fidèle à l'énergie de la journée.",
+    thumb: 'assets/img/mariage-hero.jpg',
+    videoSrc: 'assets/video/mariage.mp4',
+  },
+  {
+    title: 'Gala de gymnastique — Captation associative', category: 'sport',
+    client: 'Sport · Association',
+    desc: "Captation du gala annuel d'une association de gymnastique rythmique : chorégraphies, lumière de scène et émotion du public, restituées pour le club et les familles.",
+    thumb: 'assets/img/gala.jpg',
+  },
+  {
+    title: 'Babi Paris — Film de restaurant', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Restauration',
+    desc: "Film de présentation pour le restaurant Babi Paris : la devanture, la salle et la parole du fondateur, pour donner envie de pousser la porte avant même d'avoir vu la carte.",
+    thumb: 'assets/video/babi-poster.jpg',
+    videoSrc: 'assets/video/babi.mp4',
+  },
+  {
+    title: 'Une école en Indonésie — Documentaire', category: 'particuliers',
+    client: 'Documentaire · Indonésie',
+    desc: "Documentaire tourné dans une école en Indonésie : un regard sensible sur le quotidien des élèves, entre portraits et scènes de vie, dans une approche immersive et humaine.",
+    thumb: 'assets/img/doc-indonesie.jpg',
   },
   {
     title: 'Tempête au tournoi de Reus', category: 'sport',
@@ -47,129 +189,10 @@ const PROJECTS = [
     youtubeId: 'qTF2VW-zrZY',
   },
   {
-    title: 'Studio Léa M.', category: 'createurs',
-    client: 'Créateurs · Clip & contenu artiste',
-    desc: "Réalisation d'un clip et d'une série de capsules pour les réseaux, pensés pour prolonger l'univers visuel de l'artiste.",
-    thumb: 'https://design.canva.ai/dFbVdyuApXL9kai',
-  },
-  {
-    title: 'Nova — créatrice lifestyle', category: 'createurs',
-    client: 'Créateurs · Série YouTube',
-    desc: "Production et montage d'une série hebdomadaire, format vertical et horizontal, ligne éditoriale cohérente sur toutes les plateformes.",
-    thumb: 'https://design.canva.ai/jh6co_mk5qWLG7y',
-  },
-  {
-    title: 'BR10 — Publicité', category: 'createurs',
-    client: 'Créateurs · Film publicitaire',
-    desc: 'Film publicitaire réalisé pour BR10.',
-    thumb: 'assets/video/br10-poster.jpg',
-    videoSrc: 'assets/video/br10-pub.mp4',
-  },
-  {
-    title: 'Devine le joueur pro !', category: 'createurs',
-    client: 'Créateurs · BR10 — vidéo YouTube',
-    desc: "Format de jeu tourné avec plusieurs créateurs invités, pensé pour l'engagement et le partage sur les réseaux.",
-    thumb: 'https://i.ytimg.com/vi/tNCyoM-T2DE/hqdefault.jpg',
-    youtubeId: 'tNCyoM-T2DE',
-  },
-  {
     title: 'Créateurs', category: 'createurs',
     client: 'Créateurs · Reel Instagram',
     desc: '',
     externalUrl: 'https://www.instagram.com/reel/DQ7DJMjCM_a/',
-  },
-  {
-    title: 'Nos pires unpopular opinions', category: 'createurs',
-    client: 'Créateurs · BR10 — vidéo YouTube',
-    desc: "Format d'échange à plusieurs voix avec FrankoEnDetente, Klemo et Aficionado, pensé pour la complicité et le partage entre créateurs.",
-    thumb: 'https://i.ytimg.com/vi/IHF-Bz-26Xc/hqdefault.jpg',
-    youtubeId: 'IHF-Bz-26Xc',
-  },
-  {
-    title: 'Groupe Verrel', category: 'entreprise-marques',
-    client: 'Entreprise & Marques · Film institutionnel',
-    desc: "Film de marque présentant les équipes, les valeurs et les sites de production, tourné sur trois lieux en une semaine.",
-    thumb: 'https://design.canva.ai/1upsOvdhcQM50G_',
-  },
-  {
-    title: 'Maison Aster', category: 'entreprise-marques',
-    client: 'Entreprise & Marques · Campagne produit',
-    desc: "Campagne publicitaire multi-formats pour un lancement produit, déclinée pour le web, les réseaux et le point de vente.",
-    thumb: 'https://design.canva.ai/6R8iKU386WpRzof',
-  },
-  {
-    title: 'Mariage L. & M.', category: 'particuliers',
-    client: 'Particuliers · Film de mariage',
-    desc: "Captation et montage d'un mariage sur la journée complète, du préparatif à la soirée, restitués dans un film souvenir sobre et émouvant.",
-    thumb: 'https://design.canva.ai/4hutVSwc9yqxMcM',
-  },
-
-  /* ---- Projets d'illustration (études de cas) ---- */
-  {
-    title: 'Stade Lavallois — Film de reprise', category: 'sport',
-    client: 'Sport · Film de club',
-    desc: "Film de rentrée sportive pour un club de la région : mêlée d'images d'entraînement, de portraits de joueurs et de plans de stade pour lancer la nouvelle saison sur les réseaux.",
-    thumb: 'https://images.unsplash.com/photo-1665822813496-986a2f65cee4?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: '10 km de la Mayenne — Aftermovie', category: 'sport',
-    client: 'Sport · Couverture d\'événement',
-    desc: "Captation d'une course populaire, du sas de départ à la ligne d'arrivée, montée en aftermovie rythmé pour l'organisateur et ses partenaires.",
-    thumb: 'https://images.unsplash.com/photo-1526676537331-7747bf8278fc?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'CrossZone Laval — Campagne coaching', category: 'sport',
-    client: 'Sport · Coaching & fitness',
-    desc: "Série de vidéos courtes pour une salle de préparation physique : démonstrations d'exercices et témoignages d'adhérents, pensés pour la conversion sur Instagram.",
-    thumb: 'https://images.unsplash.com/photo-1728486145245-d4cb0c9c3470?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Maëlys — Lancement de chaîne', category: 'createurs',
-    client: 'Créateurs · Format YouTube',
-    desc: "Accompagnement d'une créatrice lifestyle sur ses premières vidéos : cadrage, lumière et montage pour poser une identité visuelle dès l'épisode un.",
-    thumb: 'https://images.unsplash.com/photo-1758273238952-9f9521504c7d?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'KEZO — Clip « Nuit blanche »', category: 'createurs',
-    client: 'Créateurs · Clip musical',
-    desc: "Réalisation d'un clip pour un artiste émergent, tourné en une nuit entre live session et plans urbains, avec une direction artistique au service du morceau.",
-    thumb: 'https://images.unsplash.com/photo-1585175768652-019e35bc657e?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Néolia — Programme immobilier neuf', category: 'entreprise-marques',
-    client: 'Entreprise & Marques · Visite vidéo & drone',
-    desc: "Visite filmée d'un programme neuf avec prises de vue drone et intérieurs, conçue pour faire vivre le bien avant même la livraison.",
-    thumb: 'https://images.unsplash.com/photo-1597265543804-cbc10d077285?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Delmas & Co — Aftermovie séminaire', category: 'entreprise-marques',
-    client: 'Entreprise & Marques · Événementiel',
-    desc: "Captation d'un séminaire d'entreprise sur deux jours, du discours d'ouverture aux ateliers, livrée en aftermovie prêt à partager dès le lendemain.",
-    thumb: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Cortessa — Marque employeur', category: 'entreprise-marques',
-    client: 'Entreprise & Marques · Témoignages collaborateurs',
-    desc: "Série de portraits vidéo de collaborateurs pour renforcer l'attractivité RH d'une PME : parcours, métiers et culture d'entreprise racontés avec justesse.",
-    thumb: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Baptême de Gabriel', category: 'particuliers',
-    client: 'Particuliers · Film de famille',
-    desc: "Film souvenir d'un baptême, capté avec discrétion sur la cérémonie et le repas, monté dans un format doux à partager avec les proches.",
-    thumb: 'https://images.unsplash.com/photo-1738748712479-3ff8c7bc4c23?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Demande en mariage à Saint-Malo', category: 'particuliers',
-    client: 'Particuliers · Vidéo couple',
-    desc: "Captation discrète d'une demande en mariage surprise face à la mer, restituée dans une vidéo émouvante de quelques minutes.",
-    thumb: 'https://images.unsplash.com/photo-1683445799252-f27732c7855e?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    title: 'Léa & Tom — Save the date', category: 'particuliers',
-    client: 'Particuliers · Teaser mariage',
-    desc: "Mini-film « save the date » tourné en amont du mariage, pensé comme une invitation vidéo à envoyer aux convives.",
-    thumb: 'https://images.unsplash.com/photo-1657219091536-0e9ae35f617c?auto=format&fit=crop&w=1400&q=80',
   },
 ];
 
@@ -190,11 +213,11 @@ const COVERAGE = {
       { q: 'Pouvez-vous filmer en extérieur, par tous les temps ?', a: "Notre matériel est adapté aux conditions extérieures : pluie, luminosité changeante ou terrain difficile ne sont pas un frein à la qualité de la captation." },
     ],
     groups: [
-      { title: 'Compétitions et événements', desc: "Une action rapide, une lumière qui change en une seconde, un public à ne pas gêner : couvrir un événement sportif demande un positionnement précis et des réflexes de tournage rodés. Nous captons vos tournois, championnats, courses et galas au plus près de l'action, pour des images utilisables sur vos réseaux comme dans les archives du club.", items: ['Couverture de compétition', 'Tournois', 'Championnats', 'Meetings sportifs', 'Courses (running, cyclisme...)', 'Galas et démonstrations'], img: 'https://images.unsplash.com/photo-1608154119029-53f3c6ad12e4?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Clubs et associations', desc: "Un club vit de son collectif : ses joueurs, ses bénévoles, son histoire. Nous mettons cette dynamique en image à travers un film de présentation, une vidéo de recrutement ou un résumé de saison, avec des formats pensés pour fédérer vos licenciés et convaincre de nouveaux membres de vous rejoindre.", items: ['Film de présentation du club', 'Vidéo de recrutement', 'Vidéo de saison', 'Résumé de match (highlights)', 'Interviews joueurs et entraîneurs', 'Reportage immersion'], img: 'https://images.unsplash.com/photo-1665822813496-986a2f65cee4?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Athlètes', desc: "Derrière chaque performance, un parcours, une discipline, une personnalité. Nous construisons avec chaque athlète une image forte — portrait, personal branding, showreel ou documentaire court — qui parle autant à ses partenaires qu'à sa communauté.", items: ["Portrait d'athlète", 'Personal branding', 'Showreel / highlight reel', "Shooting d'entraînement", 'Préparation de compétition', 'Documentaire court'], img: 'https://images.unsplash.com/photo-1758922769578-68c5ba000d87?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Compétitions et événements', desc: "Une action rapide, une lumière qui change en une seconde, un public à ne pas gêner : couvrir un événement sportif demande un positionnement précis et des réflexes de tournage rodés. Nous captons vos tournois, championnats, courses et galas au plus près de l'action, pour des images utilisables sur vos réseaux comme dans les archives du club.", items: ['Couverture de compétition', 'Tournois', 'Championnats', 'Meetings sportifs', 'Courses (running, cyclisme...)', 'Galas et démonstrations'], img: 'assets/img/competition.jpg' },
+      { title: 'Clubs et associations', desc: "Un club vit de son collectif : ses joueurs, ses bénévoles, son histoire. Nous mettons cette dynamique en image à travers un film de présentation, une vidéo de recrutement ou un résumé de saison, avec des formats pensés pour fédérer vos licenciés et convaincre de nouveaux membres de vous rejoindre.", items: ['Film de présentation du club', 'Vidéo de recrutement', 'Vidéo de saison', 'Résumé de match (highlights)', 'Interviews joueurs et entraîneurs', 'Reportage immersion'], img: 'assets/img/bourny-tennis.jpg' },
+      { title: 'Athlètes', desc: "Derrière chaque performance, un parcours, une discipline, une personnalité. Nous construisons avec chaque athlète une image forte — portrait, personal branding, showreel ou documentaire court — qui parle autant à ses partenaires qu'à sa communauté.", items: ["Portrait d'athlète", 'Personal branding', 'Showreel / highlight reel', "Shooting d'entraînement", 'Préparation de compétition', 'Documentaire court'], img: 'assets/video/flobax-teaser-poster.jpg' },
       { title: 'Coaching & fitness', desc: "Vendre un programme de coaching en ligne tient souvent à une chose : donner confiance en quelques secondes de vidéo. Nous produisons vos démonstrations d'exercices, publicités et témoignages clients dans un format clair et efficace, pensé pour convertir sur les réseaux sociaux.", items: [ "Vidéos d'exercices", 'Programmes en ligne', 'Contenus réseaux sociaux', 'Publicités pour coach sportif', 'Témoignages clients'], img: 'https://images.unsplash.com/photo-1728486145245-d4cb0c9c3470?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Marques sportives', desc: "Une marque sportive se juge autant sur le terrain que sur les réseaux. Nous produisons vos publicités produits, campagnes de lancement et contenus lifestyle avec l'énergie et l'esthétique qui donnent envie — pour marquer les esprits, pas seulement remplir un calendrier éditorial.", items: ['Publicités produits', 'Campagnes marketing', 'Lancement de collection', 'Tests produits', 'Contenus UGC', 'Lifestyle sportif'], img: 'https://images.unsplash.com/photo-1587296104393-8db6cda4418d?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Marques sportives', desc: "Une marque sportive se juge autant sur le terrain que sur les réseaux. Nous produisons vos publicités produits, campagnes de lancement et contenus lifestyle avec l'énergie et l'esthétique qui donnent envie — pour marquer les esprits, pas seulement remplir un calendrier éditorial.", items: ['Publicités produits', 'Campagnes marketing', 'Lancement de collection', 'Tests produits', 'Contenus UGC', 'Lifestyle sportif'], img: 'assets/video/br10-poster.jpg' },
     ],
   },
   createurs: {
@@ -210,11 +233,11 @@ const COVERAGE = {
       { q: 'Intervenez-vous en dehors de Paris et de la région parisienne ?', a: "Oui, nous nous déplaçons dans toute la France pour les tournages de créateurs, notamment en Pays de la Loire où nous sommes également implantés, à Laval." },
     ],
     groups: [
-      { title: 'Influenceurs', desc: "Quelques secondes : c'est le temps qu'un contenu a pour retenir l'attention avant le swipe suivant. Nous tournons et montons vos vlogs, reels et shorts avec ce rythme en tête, sans sacrifier la sincérité qui fait la différence entre un contenu vu et un contenu qui engage.", items: ['Vlogs', 'Reels Instagram', 'TikTok', 'Shorts YouTube', 'Behind the scenes', 'Daily vlog', 'Contenu lifestyle', 'Voyages'], img: 'https://images.unsplash.com/photo-1758273239210-59fea02475eb?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'YouTube', desc: "Un format YouTube qui dure dans le temps se construit, il ne s'improvise pas. Nous accompagnons vos tournages multicaméra, vos podcasts filmés et vos mini-documentaires du concept jusqu'au montage final, avec la rigueur nécessaire pour tenir une ligne éditoriale sur la durée.", items: ['Montage vidéo', 'Tournage multicaméra', 'Podcasts filmés', 'Interviews', 'Mini-documentaires', 'Challenges', 'FAQ'], img: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Influenceurs', desc: "Quelques secondes : c'est le temps qu'un contenu a pour retenir l'attention avant le swipe suivant. Nous tournons et montons vos vlogs, reels et shorts avec ce rythme en tête, sans sacrifier la sincérité qui fait la différence entre un contenu vu et un contenu qui engage.", items: ['Vlogs', 'Reels Instagram', 'TikTok', 'Shorts YouTube', 'Behind the scenes', 'Daily vlog', 'Contenu lifestyle', 'Voyages'], img: 'assets/img/matcha-social.jpg' },
+      { title: 'YouTube', desc: "Un format YouTube qui dure dans le temps se construit, il ne s'improvise pas. Nous accompagnons vos tournages multicaméra, vos podcasts filmés et vos mini-documentaires du concept jusqu'au montage final, avec la rigueur nécessaire pour tenir une ligne éditoriale sur la durée.", items: ['Montage vidéo', 'Tournage multicaméra', 'Podcasts filmés', 'Interviews', 'Mini-documentaires', 'Challenges', 'FAQ'], img: 'https://i.ytimg.com/vi/tNCyoM-T2DE/maxresdefault.jpg' },
       { title: 'Musique', desc: "Un clip réussi ne concurrence jamais la musique, il la sert. Nous construisons une direction artistique cohérente avec votre univers sonore, du clip musical à la captation de concert, en passant par la live session et le teaser de sortie.", items: ['Clip musical', 'Live session', 'Teaser de sortie', 'Visualizer', 'Captation de concert', 'Making-of'], img: 'https://images.unsplash.com/photo-1585175768652-019e35bc657e?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Artistes', desc: "Filmer une démarche artistique demande de la patience : entrer dans l'atelier, comprendre le geste, laisser place au silence quand il le faut. Nous produisons portraits, films d'atelier et documentaires créatifs avec cette justesse, pour raconter votre travail sans le trahir.", items: ['Portrait artistique', "Bande-annonce d'exposition", "Film d'atelier", 'Documentaire créatif', 'Performance artistique'], img: 'https://images.unsplash.com/photo-1781545385260-9f321f8d3f78?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Créateurs digitaux', desc: "Une formation en ligne ou une masterclass se vend sur la clarté autant que sur le fond. Nous produisons des contenus pédagogiques soignés — formation vidéo, masterclass, présentation de produits — pour donner à votre offre la crédibilité visuelle qu'elle mérite dès le lancement.", items: ['Formation vidéo', 'Masterclass', 'Publicités', 'Présentation de produits', 'Lancement de marque'], img: 'https://images.unsplash.com/photo-1610716632424-4d45990bcd48?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Artistes', desc: "Filmer une démarche artistique demande de la patience : entrer dans l'atelier, comprendre le geste, laisser place au silence quand il le faut. Nous produisons portraits, films d'atelier et documentaires créatifs avec cette justesse, pour raconter votre travail sans le trahir.", items: ['Portrait artistique', "Bande-annonce d'exposition", "Film d'atelier", 'Documentaire créatif', 'Performance artistique'], img: 'assets/img/artiste.jpg' },
+      { title: 'Créateurs digitaux', desc: "Une formation en ligne ou une masterclass se vend sur la clarté autant que sur le fond. Nous produisons des contenus pédagogiques soignés — formation vidéo, masterclass, présentation de produits — pour donner à votre offre la crédibilité visuelle qu'elle mérite dès le lancement.", items: ['Formation vidéo', 'Masterclass', 'Publicités', 'Présentation de produits', 'Lancement de marque'], img: 'assets/img/formation-studio.jpg' },
     ],
   },
   'entreprise-marques': {
@@ -230,13 +253,13 @@ const COVERAGE = {
       { q: 'Intervenez-vous à Paris et en Île-de-France pour les entreprises ?', a: "Oui, Paris et l'Île-de-France font partie de nos zones d'intervention régulières, au même titre que la Mayenne et les Pays de la Loire." },
     ],
     groups: [
-      { title: 'Communication institutionnelle', desc: "Un film d'entreprise réussi donne à voir des visages, pas seulement un logo. Nous produisons vos films institutionnels, présentations d'équipe et vidéos de recrutement pour donner une image humaine et professionnelle à votre structure — celle que vos futurs clients et candidats retiennent.", items: ["Film d'entreprise", "Présentation de l'équipe", 'Vidéo corporate', 'Vidéo de recrutement', "Culture d'entreprise", 'Visite des locaux'], img: 'https://images.unsplash.com/photo-1779700210487-a01758a3c55a?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Marketing', desc: "Chaque plateforme a ses propres codes de lecture. Nous concevons vos publicités, spots promotionnels et campagnes digitales en pensant directement aux formats natifs de Meta, TikTok et YouTube, pour des contenus qui convertissent plutôt que d'être simplement vus.", items: ['Publicité', 'Spot promotionnel', 'Lancement de produit', 'Campagne digitale', 'Vidéo pour réseaux sociaux', 'Publicité Meta / TikTok / YouTube'], img: 'https://images.unsplash.com/photo-1758876204260-bdb299fa4374?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Événementiel', desc: "Un événement professionnel ne se refait pas : la captation doit être fiable du premier au dernier instant. Nous couvrons vos conférences, séminaires, soirées d'entreprise et lancements de produit dans leur intégralité, jusqu'à la livraison d'un aftermovie prêt à partager dès le lendemain.", items: ['Conférences', 'Salons professionnels', 'Séminaires', "Soirées d'entreprise", 'Lancement de produit', 'Inaugurations', 'Galas et cérémonies', 'Aftermovie'], img: 'https://images.unsplash.com/photo-1784542471032-9ba2b8386ca7?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Produits', desc: "Avant d'acheter, un client veut voir le produit en mouvement et entendre d'autres avis. Nous produisons vos packshots vidéo, démonstrations, tutoriels et témoignages clients dans cet objectif précis : lever les derniers doutes avant la conversion.", items: ['Packshot vidéo', 'Démonstration produit', 'Tutoriels', 'Unboxing', 'Témoignages clients', 'Cas clients'], img: 'https://images.unsplash.com/photo-1780943004195-3bd30f748872?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Immobilier', desc: "La première visite d'un bien se fait aujourd'hui à l'écran. Nous réalisons vos visites vidéo, prises de vue drone et présentations de programmes neufs pour faire vivre un lieu et provoquer l'envie, bien avant la visite physique.", items: ['Visite vidéo', 'Drone', "Présentation d'agence", 'Programme immobilier neuf', 'Hôtels', 'Restaurants'], img: 'https://images.unsplash.com/photo-1597265543804-cbc10d077285?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Communication institutionnelle', desc: "Un film d'entreprise réussi donne à voir des visages, pas seulement un logo. Nous produisons vos films institutionnels, présentations d'équipe et vidéos de recrutement pour donner une image humaine et professionnelle à votre structure — celle que vos futurs clients et candidats retiennent.", items: ["Film d'entreprise", "Présentation de l'équipe", 'Vidéo corporate', 'Vidéo de recrutement', "Culture d'entreprise", 'Visite des locaux'], img: 'assets/img/atelier.jpg' },
+      { title: 'Marketing', desc: "Chaque plateforme a ses propres codes de lecture. Nous concevons vos publicités, spots promotionnels et campagnes digitales en pensant directement aux formats natifs de Meta, TikTok et YouTube, pour des contenus qui convertissent plutôt que d'être simplement vus.", items: ['Publicité', 'Spot promotionnel', 'Lancement de produit', 'Campagne digitale', 'Vidéo pour réseaux sociaux', 'Publicité Meta / TikTok / YouTube'], img: 'https://images.unsplash.com/photo-1784101832763-d1ff32764751?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Événementiel', desc: "Un événement professionnel ne se refait pas : la captation doit être fiable du premier au dernier instant. Nous couvrons vos conférences, séminaires, soirées d'entreprise et lancements de produit dans leur intégralité, jusqu'à la livraison d'un aftermovie prêt à partager dès le lendemain.", items: ['Conférences', 'Salons professionnels', 'Séminaires', "Soirées d'entreprise", 'Lancement de produit', 'Inaugurations', 'Galas et cérémonies', 'Aftermovie'], img: 'assets/img/defile-miroir.jpg' },
+      { title: 'Produits', desc: "Avant d'acheter, un client veut voir le produit en mouvement et entendre d'autres avis. Nous produisons vos packshots vidéo, démonstrations, tutoriels et témoignages clients dans cet objectif précis : lever les derniers doutes avant la conversion.", items: ['Packshot vidéo', 'Démonstration produit', 'Tutoriels', 'Unboxing', 'Témoignages clients', 'Cas clients'], img: 'assets/img/matcha.jpg' },
+      { title: 'Immobilier', desc: "La première visite d'un bien se fait aujourd'hui à l'écran. Nous réalisons vos visites vidéo, prises de vue drone et présentations de programmes neufs pour faire vivre un lieu et provoquer l'envie, bien avant la visite physique.", items: ['Visite vidéo', 'Drone', "Présentation d'agence", 'Programme immobilier neuf', 'Hôtels', 'Restaurants'], img: 'assets/img/immo-villa.jpg' },
       { title: 'RH', desc: "Attirer les bons talents demande de montrer, pas seulement de décrire, votre culture d'entreprise. Nous produisons vos témoignages collaborateurs, contenus de marque employeur et vidéos d'onboarding pour renforcer à la fois votre attractivité externe et l'engagement de vos équipes en place.", items: ['Témoignages collaborateurs', 'Marque employeur', 'Vidéo onboarding', 'Formation interne', 'E-learning'], img: 'https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Réseaux sociaux', desc: "Publier régulièrement sans y passer vos journées : c'est l'équation que nous résolvons avec une banque de contenus mensuelle — reels, stories, capsules vidéo — tournée en une seule session pour alimenter vos réseaux plusieurs semaines durant.", items: ['Banque de contenus mensuelle', 'Reels', 'Stories', 'Interviews', 'Capsules vidéo'], img: 'https://images.unsplash.com/photo-1612130536441-95ece5dcbb86?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Réseaux sociaux', desc: "Publier régulièrement sans y passer vos journées : c'est l'équation que nous résolvons avec une banque de contenus mensuelle — reels, stories, capsules vidéo — tournée en une seule session pour alimenter vos réseaux plusieurs semaines durant.", items: ['Banque de contenus mensuelle', 'Reels', 'Stories', 'Interviews', 'Capsules vidéo'], img: 'assets/img/matcha-social.jpg' },
     ],
   },
   particuliers: {
@@ -252,12 +275,12 @@ const COVERAGE = {
       { q: "Combien de temps faut-il pour recevoir le film final après l'événement ?", a: "Comptez généralement 4 à 8 semaines pour un film de mariage complet, selon la période de l'année et la complexité du montage." },
     ],
     groups: [
-      { title: 'Mariages', desc: "Le jour J passe vite, souvent trop vite pour en garder tous les détails en mémoire. Nous racontons votre histoire avec sobriété et émotion — film complet, teaser, highlight, love story avant mariage — du premier regard au brunch du lendemain, pour pouvoir la revivre autant de fois que vous le souhaitez.", items: ['Film de mariage', 'Teaser', 'Highlight', 'Vidéo complète', 'Love story avant mariage', 'Brunch du lendemain'], img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Famille', desc: "Les premiers instants d'une vie ne se rejouent pas. Nous filmons grossesse, naissance, baptême et anniversaires d'enfant avec douceur et discrétion, pour garder une trace sincère de ce qui compte, sans jamais forcer un moment.", items: ['Grossesse', 'Naissance', 'Baptême', 'Gender reveal', 'Baby shower', "Anniversaire d'enfant"], img: 'https://images.unsplash.com/photo-1764267703908-b7d151e22c13?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Événements', desc: "Une fête de famille réussie ne s'arrête pas quand la caméra arrive. Nous captons l'ambiance et les instants complices de vos anniversaires, communions et soirées privées en restant discrets, pour que vos proches oublient vite notre présence.", items: ['Anniversaire', 'Soirée privée', 'Communion', 'Bar mitzvah', 'Fête de famille', 'Cousinade'], img: 'https://images.unsplash.com/photo-1609614350505-7bb4dbdd5e62?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Couples', desc: "Les grandes étapes d'un couple méritent mieux qu'un selfie. Nous immortalisons vos séances couple, demandes en mariage et renouvellements de vœux avec des images naturelles, loin des poses forcées.", items: ['Séance couple', 'Demande en mariage', 'Fiançailles', 'Saint-Valentin', 'Renouvellement de vœux'], img: 'https://images.unsplash.com/photo-1756804528328-8ac54d25b49e?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Portraits', desc: "Une bonne image professionnelle en dit souvent plus qu'un long CV. Nous réalisons vos portraits personnels, professionnels et CV vidéo avec une mise en image soignée, pensée pour vos réseaux, votre book ou vos candidatures.", items: ['Portrait personnel', 'CV vidéo', 'Portrait professionnel', 'Book artistique', 'Réseaux sociaux'], img: 'https://images.unsplash.com/photo-1532170579297-281918c8ae72?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Souvenirs', desc: "Des heures de rushes qui dorment dans un téléphone ne racontent aucune histoire. Nous transformons vos souvenirs de vacances, journaux de voyage ou hommages vidéo en un montage sobre et structuré, pensé pour être revu pendant des années sans jamais lasser.", items: ['Film de vacances', 'Journal de voyage', 'Documentaire familial', 'Hommage vidéo', 'Montage de souvenirs'], img: 'https://images.unsplash.com/photo-1453828423292-392a660a502f?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Mariages', desc: "Le jour J passe vite, souvent trop vite pour en garder tous les détails en mémoire. Nous racontons votre histoire avec sobriété et émotion — film complet, teaser, highlight, love story avant mariage — du premier regard au brunch du lendemain, pour pouvoir la revivre autant de fois que vous le souhaitez.", items: ['Film de mariage', 'Teaser', 'Highlight', 'Vidéo complète', 'Love story avant mariage', 'Brunch du lendemain'], img: 'https://images.unsplash.com/photo-1721635513002-287a3a3b2fa1?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Famille', desc: "Les premiers instants d'une vie ne se rejouent pas. Nous filmons grossesse, naissance, baptême et anniversaires d'enfant avec douceur et discrétion, pour garder une trace sincère de ce qui compte, sans jamais forcer un moment.", items: ['Grossesse', 'Naissance', 'Baptême', 'Gender reveal', 'Baby shower', "Anniversaire d'enfant"], img: 'https://images.unsplash.com/photo-1756982477287-46a7219c1ca5?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Événements', desc: "Une fête de famille réussie ne s'arrête pas quand la caméra arrive. Nous captons l'ambiance et les instants complices de vos anniversaires, communions et soirées privées en restant discrets, pour que vos proches oublient vite notre présence.", items: ['Anniversaire', 'Soirée privée', 'Communion', 'Bar mitzvah', 'Fête de famille', 'Cousinade'], img: 'https://images.unsplash.com/photo-1758523981334-4b7d5e179efa?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Couples', desc: "Les grandes étapes d'un couple méritent mieux qu'un selfie. Nous immortalisons vos séances couple, demandes en mariage et renouvellements de vœux avec des images naturelles, loin des poses forcées.", items: ['Séance couple', 'Demande en mariage', 'Fiançailles', 'Saint-Valentin', 'Renouvellement de vœux'], img: 'https://images.unsplash.com/photo-1561240055-102e7eaa2961?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Portraits', desc: "Une bonne image professionnelle en dit souvent plus qu'un long CV. Nous réalisons vos portraits personnels, professionnels et CV vidéo avec une mise en image soignée, pensée pour vos réseaux, votre book ou vos candidatures.", items: ['Portrait personnel', 'CV vidéo', 'Portrait professionnel', 'Book artistique', 'Réseaux sociaux'], img: 'assets/img/formation-studio.jpg' },
+      { title: 'Souvenirs', desc: "Des heures de rushes qui dorment dans un téléphone ne racontent aucune histoire. Nous transformons vos souvenirs de vacances, journaux de voyage ou hommages vidéo en un montage sobre et structuré, pensé pour être revu pendant des années sans jamais lasser.", items: ['Film de vacances', 'Journal de voyage', 'Documentaire familial', 'Hommage vidéo', 'Montage de souvenirs'], img: 'assets/img/komodo-croisiere.jpg' },
     ],
   },
 };
@@ -290,7 +313,7 @@ const PAGE_META = {
     description: "Agence de production vidéo et photo entre Paris et Laval (Mayenne) : films pour le sport, les créateurs, les entreprises et les particuliers. Devis sous 48h, déplacements partout en France.",
   },
   portfolio: {
-    title: 'Portfolio — Plus de 50 projets vidéo | Coy Production',
+    title: 'Portfolio — Nos réalisations vidéo & photo | Coy Production',
     description: "Découvrez nos réalisations vidéo et photo pour le sport, les créateurs, les entreprises et les particuliers, filmées entre Paris, Laval et partout en France.",
   },
   expertises: {
@@ -481,10 +504,19 @@ document.addEventListener('DOMContentLoaded', () => {
     modalDesc.textContent = item.dataset.desc;
     const youtubeId = item.dataset.youtube;
     const videoSrc = item.dataset.video;
-    if (youtubeId) {
+    const thumb = item.dataset.thumb;
+    const gallery = item.dataset.gallery ? item.dataset.gallery.split('|') : null;
+    if (gallery) {
+      /* série photo : galerie horizontale défilable, une image par écran */
+      modalMedia.innerHTML = `<div class="modal-gallery">${gallery.map((src, i) =>
+        `<img src="${src}" alt="${item.dataset.title} — photo ${i + 1}" loading="${i ? 'lazy' : 'eager'}">`).join('')}</div>`;
+    } else if (youtubeId) {
       modalMedia.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&autoplay=1" title="${item.dataset.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
     } else if (videoSrc) {
       modalMedia.innerHTML = `<video src="${videoSrc}" controls autoplay playsinline></video>`;
+    } else if (thumb) {
+      /* projets photo : la modale affiche l'image en grand */
+      modalMedia.innerHTML = `<img src="${thumb}" alt="${item.dataset.title}">`;
     } else {
       modalMedia.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i>';
     }
@@ -540,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
        + texte à côté, pour donner un point d'entrée éditorial à la grille. */
     const cls = featured ? 'portfolio-item project-card project-card-featured rise-in' : 'portfolio-item project-card rise-in';
     return `
-    <article class="${cls}" style="animation-delay:${(i % 9) * 60}ms" tabindex="0" data-title="${p.title}" data-client="${p.client}" data-desc="${p.desc}"${p.youtubeId ? ` data-youtube="${p.youtubeId}"` : ''}${p.videoSrc ? ` data-video="${p.videoSrc}"` : ''}>
+    <article class="${cls}" style="animation-delay:${(i % 9) * 60}ms" tabindex="0" data-title="${p.title}" data-client="${p.client}" data-desc="${p.desc}" data-thumb="${p.thumb}"${p.gallery ? ` data-gallery="${p.gallery.join('|')}"` : ''}${p.youtubeId ? ` data-youtube="${p.youtubeId}"` : ''}${p.videoSrc ? ` data-video="${p.videoSrc}"` : ''}>
       <div class="thumb project-card-thumb">
         <span class="thumb-bg" style="background-image:url('${p.thumb}')"></span>
         <span class="thumb-shade"></span>
@@ -592,6 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a class="coverage-slide rise-in" style="animation-delay:${i * 90}ms" href="#/couvre/${cat.slug}">
           <span class="coverage-slide-bg" style="background-image:url('${cat.cover}')"></span>
           <span class="coverage-slide-shade"></span>
+          <span class="coverage-slide-logo" aria-hidden="true"></span>
           <span class="coverage-slide-content">
             <span class="coverage-slide-title">${cat.label}</span>
             <span class="coverage-slide-examples">${examples}</span>
@@ -778,9 +811,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (onReady) onReady();
       return;
     }
+    /* on bascule les vues AVANT le onReady : ainsi le scrollTo(0,0) des routes
+       s'applique sur la hauteur réelle de la nouvelle page (sinon, avec
+       scroll-behavior:smooth, le défilement animé se fait couper par le
+       changement de hauteur et laisse le visiteur bloqué en bas de page). */
     const finish = () => {
-      if (onReady) onReady();
       allViews.forEach(v => { v.hidden = (v !== view); });
+      if (onReady) onReady();
     };
     if (!current || !hasRoutedOnce || reduceMotionQuery.matches) {
       finish();
@@ -802,7 +839,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPortfolio(slug);
         setFAQSchema(null);
         setPageMeta(PAGE_META.portfolio.title, PAGE_META.portfolio.description);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
       return;
     }
@@ -812,14 +849,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPortfolio('all');
         setFAQSchema(null);
         setPageMeta(PAGE_META.portfolio.title, PAGE_META.portfolio.description);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
       return;
     }
 
     if (hash.startsWith('#/couvre/')) {
       const slug = hash.replace('#/couvre/', '');
-      showView(viewCoverage, () => { renderCoverageDetail(slug); window.scrollTo(0, 0); });
+      showView(viewCoverage, () => { renderCoverageDetail(slug); window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); });
       return;
     }
 
@@ -827,7 +864,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showView(viewAbout, () => {
         setFAQSchema(null);
         setPageMeta(PAGE_META['a-propos'].title, PAGE_META['a-propos'].description);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
       return;
     }
@@ -837,7 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderExpertisesPage();
         setFAQSchema(null);
         setPageMeta(PAGE_META.expertises.title, PAGE_META.expertises.description);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
       return;
     }
@@ -847,7 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderFAQList(contactPageFaqList, FAQ_CONTACT);
         setFAQSchema(FAQ_CONTACT);
         setPageMeta(PAGE_META.contact.title, PAGE_META.contact.description);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
       return;
     }
@@ -867,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
       }
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     });
   }
   window.addEventListener('hashchange', route);
