@@ -1,0 +1,7 @@
+# Coy Production — autorise l'exploration complète du site.
+# Important : les robots doivent pouvoir accéder au dossier des icônes,
+# sinon Google n'affiche pas le logo à côté du résultat de recherche.
+User-agent: *
+Allow: /
+
+Sitemap: https://coyproduction.fr/sitemap.xml
