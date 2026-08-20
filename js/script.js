@@ -5,9 +5,8 @@
 
 const CATEGORIES = [
   { slug: 'entreprise-marques', label: 'Entreprise & Marques', cover: 'assets/img/matcha.jpg' },
-  { slug: 'sport', label: 'Sport', cover: 'assets/img/sport-cover.jpg' },
-  { slug: 'createurs', label: 'Créateurs', cover: 'assets/img/createurs-cover.jpg' },
-  { slug: 'particuliers', label: 'Particuliers', cover: 'assets/img/particuliers-cover.jpg' },
+  { slug: 'personnalites', label: 'Personnalités', cover: 'assets/img/createurs-cover.jpg' },
+  { slug: 'evenementiel', label: 'Événementiel', cover: 'assets/img/rennes-3.jpg' },
 ];
 
 const PROJECTS = [
@@ -19,7 +18,7 @@ const PROJECTS = [
     gallery: ['assets/img/riodesol.jpg','assets/img/riodesol-2.jpg','assets/img/riodesol-3.jpg','assets/img/riodesol-4.jpg','assets/img/riodesol-5.jpg'],
   },
   {
-    title: 'Devine le joueur pro !', category: 'createurs',
+    title: 'Devine le joueur pro !', category: 'personnalites',
     client: 'Créateurs · BR10 — vidéo YouTube',
     desc: "Format de jeu tourné avec plusieurs créateurs invités, pensé pour l'engagement et le partage sur les réseaux.",
     thumb: 'https://i.ytimg.com/vi/tNCyoM-T2DE/hqdefault.jpg',
@@ -33,21 +32,21 @@ const PROJECTS = [
     gallery: ['assets/img/villa-bali-1.jpg','assets/img/villa-bali-2.jpg','assets/img/villa-bali-3.jpg','assets/img/villa-bali-4.jpg','assets/img/villa-bali-5.jpg','assets/img/villa-bali-6.jpg','assets/img/villa-bali-7.jpg','assets/img/villa-bali-8.jpg'],
   },
   {
-    title: 'Je me qualifie pour Roland Garros à Abidjan ?', category: 'sport',
+    title: 'Je me qualifie pour Roland Garros à Abidjan ?', category: 'personnalites',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Suivi immersif d'un tournoi qualificatif pour Roland Garros, entre tension de jeu et coulisses de déplacement.",
     thumb: 'https://i.ytimg.com/vi/xpRlK8qydS4/hqdefault.jpg',
     youtubeId: 'xpRlK8qydS4',
   },
   {
-    title: 'Lancement de formation — Shooting studio', category: 'createurs',
+    title: 'Lancement de formation — Shooting studio', category: 'personnalites',
     client: 'Créateurs · Studio',
     desc: "Séance photo en studio pour une créatrice de contenu, à l'occasion du lancement de sa formation : direction artistique soignée, fond neutre et univers premium pour habiller l'ensemble de ses supports de communication.",
     thumb: 'assets/img/formation-studio.jpg',
     gallery: ['assets/img/formation-studio.jpg','assets/img/formation-2.jpg','assets/img/formation-3.jpg','assets/img/formation-4.jpg','assets/img/formation-5.jpg','assets/img/formation-6.jpg'],
   },
   {
-    title: 'BR10 — Publicité', category: 'createurs',
+    title: 'BR10 — Publicité', category: 'personnalites',
     client: 'Créateurs · Film publicitaire',
     desc: 'Film publicitaire réalisé pour BR10.',
     thumb: 'assets/video/br10-poster.jpg',
@@ -68,28 +67,28 @@ const PROJECTS = [
     videoSrc: 'assets/video/chantilly.mp4',
   },
   {
-    title: 'Challenger de Rennes — Couverture du tournoi', category: 'sport',
+    title: 'Challenger de Rennes — Couverture du tournoi', category: 'evenementiel',
     client: 'Sport · ATP Challenger de Rennes',
     desc: "Couverture photo du tournoi ATP Challenger de Rennes : les matchs au plus près du court, mais aussi la scénographie du tournoi, comme l'entrée des joueurs sous les lumières et la fumée.",
     thumb: 'assets/img/tennis-indoor.jpg',
     gallery: ['assets/img/tennis-indoor.jpg','assets/img/rennes-2.jpg','assets/img/rennes-3.jpg'],
   },
   {
-    title: 'Nos pires unpopular opinions', category: 'createurs',
+    title: 'Nos pires unpopular opinions', category: 'personnalites',
     client: 'Créateurs · BR10 — vidéo YouTube',
     desc: "Format d'échange à plusieurs voix avec FrankoEnDetente, Klemo et Aficionado, pensé pour la complicité et le partage entre créateurs.",
     thumb: 'https://i.ytimg.com/vi/IHF-Bz-26Xc/hqdefault.jpg',
     youtubeId: 'IHF-Bz-26Xc',
   },
   {
-    title: 'Exposition Cléopâtre — Grand Palais', category: 'entreprise-marques',
+    title: 'Exposition Cléopâtre — Grand Palais', category: 'evenementiel',
     client: 'Entreprise & Marques · Culture & musées',
     desc: "Couverture photo de l'exposition Cléopâtre au Grand Palais : sculptures, pièces de haute couture et installations captées en lumière de scénographie, pour restituer l'atmosphère du parcours et alimenter la communication de l'exposition.",
     thumb: 'assets/img/cleopatre-1.jpg',
     gallery: ['assets/img/cleopatre-1.jpg', 'assets/img/cleopatre-2.jpg', 'assets/img/cleopatre-3.jpg'],
   },
   {
-    title: 'Florent Bax — Teaser de lancement', category: 'sport',
+    title: 'Florent Bax — Teaser de lancement', category: 'personnalites',
     client: 'Sport · Florent Bax — annonce chaîne YouTube',
     desc: "Teaser d'annonce du lancement de la chaîne YouTube de Florent Bax : un film court et rythmé, pensé pour créer l'attente avant la toute première vidéo.",
     thumb: 'assets/video/flobax-teaser-poster.jpg',
@@ -103,7 +102,7 @@ const PROJECTS = [
     gallery: ['assets/img/bali-orphelinat-1.jpg', 'assets/img/bali-orphelinat-2.jpg', 'assets/img/bali-orphelinat-3.jpg'],
   },
   {
-    title: "Premier titre de l'année !", category: 'sport',
+    title: "Premier titre de l'année !", category: 'personnalites',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Un titre décroché et raconté de l'intérieur, de l'échauffement à la remise des trophées.",
     thumb: 'https://i.ytimg.com/vi/d4K7qenk1Q0/hqdefault.jpg',
@@ -142,14 +141,14 @@ const PROJECTS = [
     thumb: 'assets/img/ecolodge.jpg',
   },
   {
-    title: 'Paul & Pauline — Film de mariage', category: 'particuliers',
+    title: 'Paul & Pauline — Film de mariage', category: 'evenementiel',
     client: 'Particuliers · Mariage',
     desc: "Teaser du mariage de Pauline & Paul : les alliances, la cérémonie, les retrouvailles et la fête, condensés en un film court et émouvant, fidèle à l'énergie de la journée.",
     thumb: 'assets/img/mariage-hero.jpg',
     videoSrc: 'assets/video/mariage.mp4',
   },
   {
-    title: 'Gala de gymnastique — Captation associative', category: 'sport',
+    title: 'Gala de gymnastique — Captation associative', category: 'evenementiel',
     client: 'Sport · Association',
     desc: "Captation du gala annuel d'une association de gymnastique rythmique : chorégraphies, lumière de scène et émotion du public, restituées pour le club et les familles.",
     thumb: 'assets/img/gala.jpg',
@@ -162,34 +161,34 @@ const PROJECTS = [
     videoSrc: 'assets/video/babi.mp4',
   },
   {
-    title: 'Une école en Indonésie — Documentaire', category: 'particuliers',
-    client: 'Documentaire · Indonésie',
+    title: 'Une école en Indonésie — Documentaire', category: 'entreprise-marques',
+    client: 'Entreprise & Marques · Association',
     desc: "Documentaire tourné dans une école en Indonésie : un regard sensible sur le quotidien des élèves, entre portraits et scènes de vie, dans une approche immersive et humaine.",
     thumb: 'assets/img/doc-indonesie.jpg',
   },
   {
-    title: 'Tempête au tournoi de Reus', category: 'sport',
+    title: 'Tempête au tournoi de Reus', category: 'personnalites',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Un tournoi perturbé par la météo, capté malgré les imprévus de dernière minute.",
     thumb: 'https://i.ytimg.com/vi/USFv6GryuRQ/hqdefault.jpg',
     youtubeId: 'USFv6GryuRQ',
   },
   {
-    title: "Proche de l'abandon à Abidjan !", category: 'sport',
+    title: "Proche de l'abandon à Abidjan !", category: 'personnalites',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Un match à suspense où tout a basculé, filmé au plus près de la compétition.",
     thumb: 'https://i.ytimg.com/vi/fiqkdX1E2mg/hqdefault.jpg',
     youtubeId: 'fiqkdX1E2mg',
   },
   {
-    title: 'Match de fou avec 50 aces au CH100 de Kigali', category: 'sport',
+    title: 'Match de fou avec 50 aces au CH100 de Kigali', category: 'personnalites',
     client: 'Sport · Florent Bax — vlog tournoi',
     desc: "Un affrontement électrique ponctué de 50 aces, restitué dans toute son intensité.",
     thumb: 'https://i.ytimg.com/vi/qTF2VW-zrZY/hqdefault.jpg',
     youtubeId: 'qTF2VW-zrZY',
   },
   {
-    title: 'Créateurs', category: 'createurs',
+    title: 'Créateurs', category: 'personnalites',
     client: 'Créateurs · Reel Instagram',
     desc: '',
     externalUrl: 'https://www.instagram.com/reel/DQ7DJMjCM_a/',
@@ -200,87 +199,66 @@ const PROJECTS = [
 /* Pour chaque catégorie : une intro courte (SEO) et des groupes de prestations
    affichés sous forme de tags. Basé sur le détail fourni par Coy Production. */
 const COVERAGE = {
-  sport: {
-    tagline: "Capturer l'intensité du geste sportif",
-    intro: "Vidéaste sportif entre Paris et Laval : couverture de compétitions, films de clubs, portraits d'athlètes et contenus pour coachs et marques sportives, en Pays de la Loire, en Île-de-France et partout en France.",
-    metaTitle: 'Production vidéo sportive à Paris & Laval — Coy Production',
-    metaDescription: "Vidéaste sportif entre Paris et Laval : compétitions, clubs, athlètes, coaching et marques sportives. Devis sous 48h, déplacements en Pays de la Loire et partout en France.",
-    faq: [
-      { q: 'Filmez-vous des compétitions sportives dans toute la France ?', a: "Oui. Basés entre Paris et Laval, nous couvrons vos compétitions, tournois et événements sportifs en Pays de la Loire, en Île-de-France et partout en France, avec des déplacements possibles à l'international pour les grands événements." },
-      { q: 'Travaillez-vous avec des clubs et associations sportives ?', a: "Oui, nous accompagnons régulièrement des clubs et associations, souvent avec des budgets contraints, en proposant des formats adaptés — résumé de match, film de saison, vidéo de recrutement — sans sacrifier la qualité." },
-      { q: "Combien de temps faut-il pour recevoir les images d'une compétition ?", a: "Pour un highlight ou un résumé de match, comptez généralement 3 à 5 jours ouvrés après le tournage. Les formats plus complets, comme un film de saison, suivent un planning défini ensemble dès le brief." },
-      { q: 'Proposez-vous des formats pour les athlètes en personal branding ?', a: "Oui, nous construisons avec chaque athlète un format sur-mesure — portrait, showreel, contenu réseaux — selon ses objectifs de visibilité et son calendrier sportif." },
-      { q: 'Pouvez-vous filmer en extérieur, par tous les temps ?', a: "Notre matériel est adapté aux conditions extérieures : pluie, luminosité changeante ou terrain difficile ne sont pas un frein à la qualité de la captation." },
-    ],
-    groups: [
-      { title: 'Compétitions et événements', desc: "Une action rapide, une lumière qui change en une seconde, un public à ne pas gêner : couvrir un événement sportif demande un positionnement précis et des réflexes de tournage rodés. Nous captons vos tournois, championnats, courses et galas au plus près de l'action, pour des images utilisables sur vos réseaux comme dans les archives du club.", items: ['Couverture de compétition', 'Tournois', 'Championnats', 'Meetings sportifs', 'Courses (running, cyclisme...)', 'Galas et démonstrations'], img: 'assets/img/competition.jpg' },
-      { title: 'Clubs et associations', desc: "Un club vit de son collectif : ses joueurs, ses bénévoles, son histoire. Nous mettons cette dynamique en image à travers un film de présentation, une vidéo de recrutement ou un résumé de saison, avec des formats pensés pour fédérer vos licenciés et convaincre de nouveaux membres de vous rejoindre.", items: ['Film de présentation du club', 'Vidéo de recrutement', 'Vidéo de saison', 'Résumé de match (highlights)', 'Interviews joueurs et entraîneurs', 'Reportage immersion'], img: 'assets/img/bourny-tennis.jpg' },
-      { title: 'Athlètes', desc: "Derrière chaque performance, un parcours, une discipline, une personnalité. Nous construisons avec chaque athlète une image forte — portrait, personal branding, showreel ou documentaire court — qui parle autant à ses partenaires qu'à sa communauté.", items: ["Portrait d'athlète", 'Personal branding', 'Showreel / highlight reel', "Shooting d'entraînement", 'Préparation de compétition', 'Documentaire court'], img: 'assets/video/flobax-teaser-poster.jpg' },
-      { title: 'Coaching & fitness', desc: "Vendre un programme de coaching en ligne tient souvent à une chose : donner confiance en quelques secondes de vidéo. Nous produisons vos démonstrations d'exercices, publicités et témoignages clients dans un format clair et efficace, pensé pour convertir sur les réseaux sociaux.", items: [ "Vidéos d'exercices", 'Programmes en ligne', 'Contenus réseaux sociaux', 'Publicités pour coach sportif', 'Témoignages clients'], img: 'https://images.unsplash.com/photo-1728486145245-d4cb0c9c3470?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Marques sportives', desc: "Une marque sportive se juge autant sur le terrain que sur les réseaux. Nous produisons vos publicités produits, campagnes de lancement et contenus lifestyle avec l'énergie et l'esthétique qui donnent envie — pour marquer les esprits, pas seulement remplir un calendrier éditorial.", items: ['Publicités produits', 'Campagnes marketing', 'Lancement de collection', 'Tests produits', 'Contenus UGC', 'Lifestyle sportif'], img: 'assets/video/br10-poster.jpg' },
-    ],
-  },
-  createurs: {
-    tagline: 'Donner corps à votre univers créatif',
-    intro: "Production vidéo pour créateurs de contenu, entre Paris et Laval : vlogs, clips musicaux, formats YouTube et contenus pensés pour chaque plateforme, avec des déplacements dans toute la France.",
-    metaTitle: 'Production vidéo pour créateurs de contenu — Coy Production',
-    metaDescription: "Vlogs, YouTube, clips musicaux, contenus pour artistes et créateurs digitaux : une production pensée pour chaque plateforme, entre Paris, Laval et toute la France.",
-    faq: [
-      { q: 'Travaillez-vous avec des créateurs qui débutent ou uniquement des profils établis ?', a: "Nous accompagnons aussi bien des créateurs en développement que des profils confirmés — l'objectif est toujours d'affiner un univers visuel cohérent, quel que soit le nombre d'abonnés." },
-      { q: 'Pouvez-vous produire plusieurs formats à partir d’un seul tournage (YouTube, réels, TikTok) ?', a: "Oui, c'est une demande fréquente : une même journée de tournage peut être déclinée en vidéo YouTube longue, plusieurs reels et des shorts, pour optimiser le temps de tournage et le budget." },
-      { q: 'Assurez-vous le montage ou uniquement le tournage ?', a: "Les deux. Nous proposons un accompagnement complet, du tournage au montage final, mais pouvons aussi intervenir uniquement sur une étape si vous avez déjà une équipe en place." },
-      { q: 'Pouvez-vous filmer un clip musical avec un budget limité ?', a: "Oui, nous adaptons le format — lieu, équipe, durée de tournage — à votre budget tout en préservant une direction artistique forte et cohérente avec votre univers musical." },
-      { q: 'Intervenez-vous en dehors de Paris et de la région parisienne ?', a: "Oui, nous nous déplaçons dans toute la France pour les tournages de créateurs, notamment en Pays de la Loire où nous sommes également implantés, à Laval." },
-    ],
-    groups: [
-      { title: 'Influenceurs', desc: "Quelques secondes : c'est le temps qu'un contenu a pour retenir l'attention avant le swipe suivant. Nous tournons et montons vos vlogs, reels et shorts avec ce rythme en tête, sans sacrifier la sincérité qui fait la différence entre un contenu vu et un contenu qui engage.", items: ['Vlogs', 'Reels Instagram', 'TikTok', 'Shorts YouTube', 'Behind the scenes', 'Daily vlog', 'Contenu lifestyle', 'Voyages'], img: 'assets/img/matcha-social.jpg' },
-      { title: 'YouTube', desc: "Un format YouTube qui dure dans le temps se construit, il ne s'improvise pas. Nous accompagnons vos tournages multicaméra, vos podcasts filmés et vos mini-documentaires du concept jusqu'au montage final, avec la rigueur nécessaire pour tenir une ligne éditoriale sur la durée.", items: ['Montage vidéo', 'Tournage multicaméra', 'Podcasts filmés', 'Interviews', 'Mini-documentaires', 'Challenges', 'FAQ'], img: 'https://i.ytimg.com/vi/tNCyoM-T2DE/maxresdefault.jpg' },
-      { title: 'Musique', desc: "Un clip réussi ne concurrence jamais la musique, il la sert. Nous construisons une direction artistique cohérente avec votre univers sonore, du clip musical à la captation de concert, en passant par la live session et le teaser de sortie.", items: ['Clip musical', 'Live session', 'Teaser de sortie', 'Visualizer', 'Captation de concert', 'Making-of'], img: 'https://images.unsplash.com/photo-1585175768652-019e35bc657e?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Artistes', desc: "Filmer une démarche artistique demande de la patience : entrer dans l'atelier, comprendre le geste, laisser place au silence quand il le faut. Nous produisons portraits, films d'atelier et documentaires créatifs avec cette justesse, pour raconter votre travail sans le trahir.", items: ['Portrait artistique', "Bande-annonce d'exposition", "Film d'atelier", 'Documentaire créatif', 'Performance artistique'], img: 'assets/img/artiste.jpg' },
-      { title: 'Créateurs digitaux', desc: "Une formation en ligne ou une masterclass se vend sur la clarté autant que sur le fond. Nous produisons des contenus pédagogiques soignés — formation vidéo, masterclass, présentation de produits — pour donner à votre offre la crédibilité visuelle qu'elle mérite dès le lancement.", items: ['Formation vidéo', 'Masterclass', 'Publicités', 'Présentation de produits', 'Lancement de marque'], img: 'assets/img/formation-studio.jpg' },
-    ],
-  },
   'entreprise-marques': {
-    tagline: 'Raconter votre marque en image',
-    intro: "Production vidéo corporate et publicitaire pour entreprises et marques, entre Paris et Laval : films institutionnels, campagnes marketing, événementiel et contenus produits, en Île-de-France, en Pays de la Loire et partout en France.",
-    metaTitle: 'Production vidéo corporate & marketing — Coy Production',
-    metaDescription: "Films institutionnels, campagnes marketing, événementiel et contenus produits pour entreprises et marques, entre Paris, Laval et toute la France. Devis sous 48h.",
+    tagline: 'Faire connaître votre activité',
+    intro: "Production vidéo et photo pour entreprises, marques et associations, entre Paris et Laval : films institutionnels, campagnes publicitaires, contenus produits, immobilier et marque employeur, en Île-de-France, en Pays de la Loire et partout en France.",
+    metaTitle: 'Production vidéo pour entreprises & marques — Coy Production',
+    metaDescription: "Films d'entreprise, publicités, contenus produits, immobilier et marque employeur, entre Paris et Laval. Devis sous 48h, déplacements partout en France.",
     faq: [
-      { q: 'Quel est le délai moyen pour un film corporate ?', a: "Comptez en moyenne 3 à 6 semaines entre le brief et la livraison finale, selon la complexité du projet — nombre de lieux, interviews, animations graphiques." },
-      { q: 'Travaillez-vous avec des PME ou uniquement de grandes entreprises ?', a: "Nous accompagnons des structures de toutes tailles, de la PME familiale au grand groupe, en adaptant le format et le budget à vos objectifs de communication." },
-      { q: 'Pouvez-vous couvrir un événement professionnel sur une journée complète ?', a: "Oui, nous proposons une captation complète de vos événements — conférences, séminaires, lancements de produit — avec une livraison rapide d'un aftermovie prêt à partager." },
-      { q: 'Livrez-vous les fichiers dans des formats adaptés à chaque réseau social ?', a: "Oui, chaque projet est exporté dans les formats nécessaires (carré, vertical, horizontal) pour LinkedIn, Instagram, YouTube ou vos supports internes." },
-      { q: 'Intervenez-vous à Paris et en Île-de-France pour les entreprises ?', a: "Oui, Paris et l'Île-de-France font partie de nos zones d'intervention régulières, au même titre que la Mayenne et les Pays de la Loire." },
+      { q: 'Quel budget prévoir pour un film d’entreprise ?', a: "Tout dépend du format et de la durée de tournage. Un film de présentation tourné sur une journée démarre autour de 1 200 €, une campagne multi-formats se construit sur devis. Nous cadrons toujours le budget avant de réserver une date." },
+      { q: 'Combien de temps faut-il entre le brief et la livraison ?', a: "Comptez en moyenne deux à trois semaines pour un film d'entreprise : un échange de cadrage, le repérage si nécessaire, la journée de tournage, puis le montage avec un aller-retour de corrections inclus." },
+      { q: 'Pouvez-vous décliner un même tournage pour les réseaux sociaux ?', a: "Oui, et c'est même recommandé : une seule journée de tournage peut produire le film principal ainsi que plusieurs formats verticaux courts pour LinkedIn, Instagram ou TikTok, sans surcoût de production." },
+      { q: 'Travaillez-vous avec des associations et des structures à budget réduit ?', a: "Oui. Nous adaptons le format à l'enveloppe disponible — un reportage photo, une captation légère ou un film court — plutôt que de dégrader la qualité d'un format trop ambitieux." },
+      { q: 'Intervenez-vous en dehors de Paris et de la Mayenne ?', a: "Oui, nous nous déplaçons partout en France et à l'international. Les frais de déplacement sont annoncés dans le devis, sans surprise." },
     ],
     groups: [
       { title: 'Communication institutionnelle', desc: "Un film d'entreprise réussi donne à voir des visages, pas seulement un logo. Nous produisons vos films institutionnels, présentations d'équipe et vidéos de recrutement pour donner une image humaine et professionnelle à votre structure — celle que vos futurs clients et candidats retiennent.", items: ["Film d'entreprise", "Présentation de l'équipe", 'Vidéo corporate', 'Vidéo de recrutement', "Culture d'entreprise", 'Visite des locaux'], img: 'assets/img/atelier.jpg' },
-      { title: 'Marketing', desc: "Chaque plateforme a ses propres codes de lecture. Nous concevons vos publicités, spots promotionnels et campagnes digitales en pensant directement aux formats natifs de Meta, TikTok et YouTube, pour des contenus qui convertissent plutôt que d'être simplement vus.", items: ['Publicité', 'Spot promotionnel', 'Lancement de produit', 'Campagne digitale', 'Vidéo pour réseaux sociaux', 'Publicité Meta / TikTok / YouTube'], img: 'https://images.unsplash.com/photo-1784101832763-d1ff32764751?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Événementiel', desc: "Un événement professionnel ne se refait pas : la captation doit être fiable du premier au dernier instant. Nous couvrons vos conférences, séminaires, soirées d'entreprise et lancements de produit dans leur intégralité, jusqu'à la livraison d'un aftermovie prêt à partager dès le lendemain.", items: ['Conférences', 'Salons professionnels', 'Séminaires', "Soirées d'entreprise", 'Lancement de produit', 'Inaugurations', 'Galas et cérémonies', 'Aftermovie'], img: 'assets/img/defile-miroir.jpg' },
-      { title: 'Produits', desc: "Avant d'acheter, un client veut voir le produit en mouvement et entendre d'autres avis. Nous produisons vos packshots vidéo, démonstrations, tutoriels et témoignages clients dans cet objectif précis : lever les derniers doutes avant la conversion.", items: ['Packshot vidéo', 'Démonstration produit', 'Tutoriels', 'Unboxing', 'Témoignages clients', 'Cas clients'], img: 'assets/img/matcha.jpg' },
-      { title: 'Immobilier', desc: "La première visite d'un bien se fait aujourd'hui à l'écran. Nous réalisons vos visites vidéo, prises de vue drone et présentations de programmes neufs pour faire vivre un lieu et provoquer l'envie, bien avant la visite physique.", items: ['Visite vidéo', 'Drone', "Présentation d'agence", 'Programme immobilier neuf', 'Hôtels', 'Restaurants'], img: 'assets/img/immo-villa.jpg' },
-      { title: 'RH', desc: "Attirer les bons talents demande de montrer, pas seulement de décrire, votre culture d'entreprise. Nous produisons vos témoignages collaborateurs, contenus de marque employeur et vidéos d'onboarding pour renforcer à la fois votre attractivité externe et l'engagement de vos équipes en place.", items: ['Témoignages collaborateurs', 'Marque employeur', 'Vidéo onboarding', 'Formation interne', 'E-learning'], img: 'https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Marketing & publicité', desc: "Chaque plateforme a ses propres codes de lecture. Nous concevons vos publicités, spots promotionnels et campagnes digitales en pensant directement aux formats natifs de Meta, TikTok et YouTube, pour des contenus qui convertissent plutôt que d'être simplement vus.", items: ['Publicité', 'Spot promotionnel', 'Lancement de produit', 'Campagne digitale', 'Publicité Meta / TikTok / YouTube', 'Marques sportives', 'Lancement de collection'], img: 'assets/img/marketing-xgimi.jpg' },
+      { title: 'Produits', desc: "Avant d'acheter, un client veut voir le produit en mouvement et entendre d'autres avis. Nous produisons vos packshots vidéo, démonstrations, tutoriels et témoignages clients dans cet objectif précis : lever les derniers doutes avant la conversion.", items: ['Packshot vidéo', 'Démonstration produit', 'Shooting produit', 'Tutoriels', 'Unboxing', 'Témoignages clients'], img: 'assets/img/matcha.jpg' },
+      { title: 'Immobilier & hôtellerie', desc: "La première visite d'un bien se fait aujourd'hui à l'écran. Nous réalisons vos visites vidéo, prises de vue drone et reportages photo pour faire vivre un lieu et provoquer l'envie, bien avant la visite physique.", items: ['Visite vidéo', 'Drone', 'Photos pour annonce et Airbnb', 'Programme immobilier neuf', 'Hôtels et lodges', 'Restaurants'], img: 'assets/img/immo-villa.jpg' },
+      { title: 'Marque employeur & RH', desc: "Attirer les bons talents demande de montrer, pas seulement de décrire, votre culture d'entreprise. Nous produisons vos témoignages collaborateurs, contenus de marque employeur et vidéos d'onboarding pour renforcer à la fois votre attractivité externe et l'engagement de vos équipes en place.", items: ['Témoignages collaborateurs', 'Marque employeur', 'Vidéo onboarding', 'Formation interne', 'E-learning'], img: 'https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=1400&q=80' },
       { title: 'Réseaux sociaux', desc: "Publier régulièrement sans y passer vos journées : c'est l'équation que nous résolvons avec une banque de contenus mensuelle — reels, stories, capsules vidéo — tournée en une seule session pour alimenter vos réseaux plusieurs semaines durant.", items: ['Banque de contenus mensuelle', 'Reels', 'Stories', 'Interviews', 'Capsules vidéo'], img: 'assets/img/matcha-social.jpg' },
+      { title: 'Clubs & associations', desc: "Un club vit de son collectif : ses joueurs, ses bénévoles, son histoire. Nous mettons cette dynamique en image à travers un film de présentation, une vidéo de recrutement ou un résumé de saison, avec des formats pensés pour fédérer vos licenciés et convaincre de nouveaux membres de vous rejoindre.", items: ['Film de présentation du club', 'Vidéo de recrutement', 'Vidéo de saison', 'Campagne de sensibilisation', 'Interviews', 'Reportage immersion'], img: 'assets/img/bourny-tennis.jpg' },
     ],
   },
-  particuliers: {
-    tagline: 'Des souvenirs filmés avec justesse',
-    intro: "Films de mariage, naissances et événements de famille en Mayenne et en Pays de la Loire, avec des déplacements partout en France : des souvenirs filmés avec soin, sobres et sincères.",
-    metaTitle: 'Film de mariage & souvenirs de famille — Coy Production',
-    metaDescription: "Films de mariage, naissances et événements de famille en Mayenne, en Pays de la Loire et partout en France : des souvenirs filmés avec soin, sobres et sincères.",
+  personnalites: {
+    tagline: 'Développer votre image et votre audience',
+    intro: "Production vidéo et photo pour athlètes, créateurs de contenu, artistes et formateurs, entre Paris et Laval : personal branding, vlogs, clips, formations filmées et portraits, avec des déplacements partout en France et à l'international.",
+    metaTitle: 'Production vidéo pour personnalités & créateurs — Coy Production',
+    metaDescription: "Athlètes, créateurs de contenu, artistes, coachs et formateurs : personal branding, vlogs, clips et portraits, entre Paris, Laval et toute la France.",
     faq: [
-      { q: "Combien de temps à l'avance faut-il réserver un film de mariage ?", a: "Nous recommandons de réserver 6 à 12 mois à l'avance, surtout pour les mariages en période estivale, afin de garantir la disponibilité de la date." },
-      { q: 'Le film de mariage est-il personnalisable selon nos envies ?', a: "Oui, chaque film est construit avec vous : durée, moments à privilégier, musique, ton sobre, festif ou émouvant — rien n'est standardisé." },
-      { q: 'Proposez-vous des formats courts en plus du film complet ?', a: "Oui, en complément du film intégral, nous proposons un teaser et un highlight de quelques minutes, pensés pour être partagés facilement avec vos proches." },
-      { q: 'Intervenez-vous en dehors de la Mayenne et des Pays de la Loire ?', a: "Oui, nous nous déplaçons dans toute la France pour les mariages et événements privés, avec des frais de déplacement calculés selon la distance." },
-      { q: "Combien de temps faut-il pour recevoir le film final après l'événement ?", a: "Comptez généralement 4 à 8 semaines pour un film de mariage complet, selon la période de l'année et la complexité du montage." },
+      { q: 'Accompagnez-vous les profils qui débutent ?', a: "Oui, aussi bien des personnalités en développement que des profils confirmés. L'objectif est le même : construire un univers visuel cohérent et reconnaissable, quel que soit le nombre d'abonnés au départ." },
+      { q: 'Peut-on tirer plusieurs formats d’un seul tournage ?', a: "C'est la demande la plus fréquente, et la plus rentable : une journée de tournage peut donner une vidéo longue, plusieurs reels et des shorts, pour alimenter toutes vos plateformes sans multiplier les jours de production." },
+      { q: 'Proposez-vous un accompagnement régulier dans la durée ?', a: "Oui. Beaucoup de personnalités travaillent avec nous en sessions récurrentes — mensuelles ou par saison — pour tenir une ligne éditoriale sur la durée plutôt que de publier par à-coups." },
+      { q: 'Pouvez-vous nous suivre en déplacement ou en compétition ?', a: "Oui, nous suivons régulièrement des athlètes et des créateurs en tournoi ou en voyage, en France comme à l'étranger, avec un dispositif léger pensé pour ne jamais gêner la performance." },
+      { q: 'Assurez-vous le montage seul, sans le tournage ?', a: "Oui. Nous pouvons intervenir uniquement au montage si vous tournez déjà vos images, ou prendre l'ensemble en charge, du concept à la livraison finale." },
     ],
     groups: [
-      { title: 'Mariages', desc: "Le jour J passe vite, souvent trop vite pour en garder tous les détails en mémoire. Nous racontons votre histoire avec sobriété et émotion — film complet, teaser, highlight, love story avant mariage — du premier regard au brunch du lendemain, pour pouvoir la revivre autant de fois que vous le souhaitez.", items: ['Film de mariage', 'Teaser', 'Highlight', 'Vidéo complète', 'Love story avant mariage', 'Brunch du lendemain'], img: 'https://images.unsplash.com/photo-1721635513002-287a3a3b2fa1?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Famille', desc: "Les premiers instants d'une vie ne se rejouent pas. Nous filmons grossesse, naissance, baptême et anniversaires d'enfant avec douceur et discrétion, pour garder une trace sincère de ce qui compte, sans jamais forcer un moment.", items: ['Grossesse', 'Naissance', 'Baptême', 'Gender reveal', 'Baby shower', "Anniversaire d'enfant"], img: 'https://images.unsplash.com/photo-1756982477287-46a7219c1ca5?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Événements', desc: "Une fête de famille réussie ne s'arrête pas quand la caméra arrive. Nous captons l'ambiance et les instants complices de vos anniversaires, communions et soirées privées en restant discrets, pour que vos proches oublient vite notre présence.", items: ['Anniversaire', 'Soirée privée', 'Communion', 'Bar mitzvah', 'Fête de famille', 'Cousinade'], img: 'https://images.unsplash.com/photo-1758523981334-4b7d5e179efa?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Couples', desc: "Les grandes étapes d'un couple méritent mieux qu'un selfie. Nous immortalisons vos séances couple, demandes en mariage et renouvellements de vœux avec des images naturelles, loin des poses forcées.", items: ['Séance couple', 'Demande en mariage', 'Fiançailles', 'Saint-Valentin', 'Renouvellement de vœux'], img: 'https://images.unsplash.com/photo-1561240055-102e7eaa2961?auto=format&fit=crop&w=1400&q=80' },
-      { title: 'Portraits', desc: "Une bonne image professionnelle en dit souvent plus qu'un long CV. Nous réalisons vos portraits personnels, professionnels et CV vidéo avec une mise en image soignée, pensée pour vos réseaux, votre book ou vos candidatures.", items: ['Portrait personnel', 'CV vidéo', 'Portrait professionnel', 'Book artistique', 'Réseaux sociaux'], img: 'assets/img/formation-studio.jpg' },
-      { title: 'Souvenirs', desc: "Des heures de rushes qui dorment dans un téléphone ne racontent aucune histoire. Nous transformons vos souvenirs de vacances, journaux de voyage ou hommages vidéo en un montage sobre et structuré, pensé pour être revu pendant des années sans jamais lasser.", items: ['Film de vacances', 'Journal de voyage', 'Documentaire familial', 'Hommage vidéo', 'Montage de souvenirs'], img: 'assets/img/komodo-croisiere.jpg' },
+      { title: 'Athlètes', desc: "Derrière chaque performance, un parcours, une discipline, une personnalité. Nous construisons avec chaque athlète une image forte — portrait, personal branding, showreel ou documentaire court — qui parle autant à ses partenaires qu'à sa communauté.", items: ["Portrait d'athlète", 'Personal branding', 'Showreel / highlight reel', "Shooting d'entraînement", 'Suivi en tournoi', 'Documentaire court'], img: 'assets/video/flobax-teaser-poster.jpg' },
+      { title: 'Créateurs de contenu', desc: "Quelques secondes : c'est le temps qu'un contenu a pour retenir l'attention avant le swipe suivant. Nous tournons et montons vos vlogs, reels et formats YouTube avec ce rythme en tête, sans sacrifier la sincérité qui fait la différence entre un contenu vu et un contenu qui engage.", items: ['Vlogs', 'Reels Instagram', 'TikTok', 'Shorts et formats YouTube', 'Tournage multicaméra', 'Podcasts filmés', 'Behind the scenes'], img: 'assets/video/br10-poster.jpg' },
+      { title: 'Artistes & musique', desc: "Un clip réussi ne concurrence jamais la musique, il la sert. Nous construisons une direction artistique cohérente avec votre univers — du clip musical à la captation de concert, du portrait d'atelier au film d'exposition — pour raconter votre travail sans le trahir.", items: ['Clip musical', 'Live session', 'Teaser de sortie', 'Portrait artistique', "Film d'atelier", 'Documentaire créatif'], img: 'assets/img/artiste.jpg' },
+      { title: 'Coachs & formateurs', desc: "Une formation en ligne ou un programme de coaching se vend sur la clarté autant que sur le fond. Nous produisons des contenus pédagogiques soignés — formation vidéo, masterclass, publicités et témoignages — pour donner à votre offre la crédibilité visuelle qu'elle mérite dès le lancement.", items: ['Formation vidéo', 'Masterclass', 'Lancement de programme', "Vidéos d'exercices", 'Témoignages clients', 'Publicités'], img: 'assets/img/formation-studio.jpg' },
+      { title: 'Portraits & personal branding', desc: "Une bonne image professionnelle en dit souvent plus qu'un long CV. Nous réalisons vos portraits et shootings de personal branding avec une direction artistique soignée, pensée pour vos réseaux, votre site, votre book ou vos candidatures.", items: ['Portrait professionnel', 'Shooting personal branding', 'Book artistique', 'CV vidéo', 'Photos pour les réseaux'], img: 'assets/img/formation-2.jpg' },
+    ],
+  },
+  evenementiel: {
+    tagline: 'Immortaliser une date',
+    intro: "Captation d'événements entre Paris et Laval : séminaires et soirées d'entreprise, compétitions sportives, mariages, célébrations privées et événements culturels. Un moment qui ne se rejoue pas mérite un dispositif fiable du premier au dernier instant.",
+    metaTitle: "Captation d'événements — séminaires, mariages, compétitions | Coy Production",
+    metaDescription: "Aftermovie de séminaire, film de mariage, captation de compétition et d'événement culturel, entre Paris et Laval. Déplacements partout en France, devis sous 48h.",
+    faq: [
+      { q: 'Combien de temps après l’événement recevons-nous les images ?', a: "Pour un aftermovie, comptez 5 à 10 jours ouvrés. Nous pouvons aussi livrer un format court dès le lendemain si vous devez communiquer à chaud — c'est à préciser au moment du devis." },
+      { q: 'Êtes-vous présents sur toute la durée de l’événement ?', a: "Oui, la formule habituelle couvre l'événement du début à la fin. Pour les formats longs — séminaire sur deux jours, mariage de la préparation à la soirée — nous cadrons ensemble les moments clés à ne pas manquer." },
+      { q: 'Que se passe-t-il en cas d’imprévu technique ?', a: "Nous travaillons systématiquement avec du matériel doublé — boîtiers, batteries, cartes mémoire — précisément parce qu'un événement ne se rejoue pas. Les fichiers sont sauvegardés sur deux supports dès la fin du tournage." },
+      { q: 'Filmez-vous aussi les événements privés en plus des événements d’entreprise ?', a: "Oui. Mariages, anniversaires, baptêmes et fêtes de famille font partie de notre quotidien, avec la même exigence technique que pour un événement professionnel — et beaucoup de discrétion." },
+      { q: 'Proposez-vous la photo en plus de la vidéo ?', a: "Oui, la photo peut être assurée en parallèle de la captation vidéo sur le même événement, ce qui évite d'avoir à coordonner deux prestataires le jour J." },
+    ],
+    groups: [
+      { title: "Événements d'entreprise", desc: "Un événement professionnel ne se refait pas : la captation doit être fiable du premier au dernier instant. Nous couvrons vos conférences, séminaires, salons, soirées d'entreprise et lancements de produit dans leur intégralité, jusqu'à la livraison d'un aftermovie prêt à partager dès le lendemain.", items: ['Conférences', 'Séminaires', 'Salons professionnels', "Soirées d'entreprise", 'Lancement de produit', 'Inaugurations', 'Aftermovie'], img: 'assets/img/defile-miroir.jpg' },
+      { title: 'Sport & compétitions', desc: "Une action rapide, une lumière qui change en une seconde, un public à ne pas gêner : couvrir un événement sportif demande un positionnement précis et des réflexes de tournage rodés. Nous captons vos tournois, championnats, courses et galas au plus près de l'action, pour des images utilisables sur vos réseaux comme dans vos archives.", items: ['Couverture de compétition', 'Tournois et championnats', 'Meetings sportifs', 'Courses (running, cyclisme...)', 'Galas et démonstrations', 'Résumé de match (highlights)'], img: 'assets/img/competition.jpg' },
+      { title: 'Mariages & couples', desc: "Le jour J passe vite, souvent trop vite pour en garder tous les détails en mémoire. Nous racontons votre histoire avec sobriété et émotion — film complet, teaser, highlight — du premier regard au brunch du lendemain, pour pouvoir la revivre autant de fois que vous le souhaitez.", items: ['Film de mariage', 'Teaser', 'Highlight', 'Vidéo complète', 'Love story avant mariage', 'Demande en mariage', 'Séance couple'], img: 'assets/img/mariage-hero.jpg' },
+      { title: 'Célébrations privées', desc: "Une fête de famille réussie ne s'arrête pas quand la caméra arrive. Nous captons l'ambiance et les instants complices de vos anniversaires, baptêmes et soirées privées en restant discrets, pour que vos proches oublient vite notre présence.", items: ['Anniversaire', 'Baptême', 'Communion', 'Naissance et grossesse', 'Soirée privée', 'Fête de famille', 'Film souvenir'], img: 'https://images.unsplash.com/photo-1758523981334-4b7d5e179efa?auto=format&fit=crop&w=1400&q=80' },
+      { title: 'Culture & spectacle', desc: "Filmer un spectacle ou une exposition demande de composer avec une lumière pensée pour la scène, pas pour la caméra. Nous captons vos expositions, défilés, concerts et galas en respectant la scénographie, pour restituer l'atmosphère telle que le public l'a vécue.", items: ['Exposition', 'Défilé', 'Concert et captation live', 'Gala et cérémonie', 'Performance artistique', 'Bande-annonce culturelle'], img: 'assets/img/cleopatre-2.jpg' },
     ],
   },
 };
@@ -310,15 +288,15 @@ const FAQ_CONTACT = [
 const PAGE_META = {
   home: {
     title: 'Coy Production — Agence de production vidéo à Paris & Laval',
-    description: "Agence de production vidéo et photo entre Paris et Laval (Mayenne) : films pour le sport, les créateurs, les entreprises et les particuliers. Devis sous 48h, déplacements partout en France.",
+    description: "Agence de production vidéo et photo entre Paris et Laval (Mayenne) : films pour les entreprises et marques, les personnalités et les événements. Devis sous 48h, déplacements partout en France.",
   },
   portfolio: {
     title: 'Portfolio — Nos réalisations vidéo & photo | Coy Production',
-    description: "Découvrez nos réalisations vidéo et photo pour le sport, les créateurs, les entreprises et les particuliers, filmées entre Paris, Laval et partout en France.",
+    description: "Découvrez nos réalisations vidéo et photo pour les entreprises et marques, les personnalités et l'événementiel, filmées entre Paris, Laval et partout en France.",
   },
   expertises: {
-    title: 'Nos expertises — Entreprises, Sport, Créateurs, Particuliers',
-    description: "Production vidéo et photo pour les entreprises & marques, le sport, les créateurs de contenu et les particuliers. Basés entre Paris et Laval, présents partout en France.",
+    title: 'Nos expertises — Entreprises & Marques, Personnalités, Événementiel',
+    description: "Production vidéo et photo autour de trois univers : entreprises & marques, personnalités et événementiel. Basés entre Paris et Laval, présents partout en France.",
   },
   'a-propos': {
     title: 'À propos — Hugo Coyard, fondateur de Coy Production',
@@ -326,7 +304,7 @@ const PAGE_META = {
   },
   contact: {
     title: 'Contact — Devis vidéo gratuit sous 48h | Coy Production',
-    description: "Contactez Coy Production, studio de production vidéo entre Paris et Laval. Devis gratuit sous 48h, sans engagement, pour vos projets sport, entreprise, créateurs et particuliers.",
+    description: "Contactez Coy Production, studio de production vidéo entre Paris et Laval. Devis gratuit sous 48h, sans engagement, pour vos projets d'entreprise, de personal branding ou d'événement.",
   },
 };
 
@@ -693,7 +671,30 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
     }).join('') : '';
-    document.querySelectorAll('.coverage-row.reveal').forEach(el => io.observe(el));
+    /* liens croisés : rattrape le visiteur entré par le mauvais univers
+       (le cas le plus fréquent : événement d'entreprise vs contenu de marque). */
+    if (data) {
+      const CROSS = {
+        'entreprise-marques': [
+          { slug: 'evenementiel', txt: "Vous cherchez la captation d'un séminaire ou d'une soirée d'entreprise ?" },
+          { slug: 'personnalites', txt: 'Vous êtes une personnalité et non une structure ?' },
+        ],
+        personnalites: [
+          { slug: 'evenementiel', txt: 'Vous avez une compétition ou un événement à faire couvrir ?' },
+          { slug: 'entreprise-marques', txt: 'Vous représentez une marque ou une entreprise ?' },
+        ],
+        evenementiel: [
+          { slug: 'entreprise-marques', txt: 'Vous cherchez plutôt du contenu de marque, hors événement ?' },
+          { slug: 'personnalites', txt: "Vous voulez développer votre image sur la durée ?" },
+        ],
+      };
+      const links = (CROSS[slug] || []).map(c => {
+        const target = CATEGORIES.find(x => x.slug === c.slug);
+        return target ? `<a class="coverage-cross-link" href="#/couvre/${c.slug}">${c.txt} <strong>${target.label}</strong> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>` : '';
+      }).join('');
+      if (links) coverageGroups.insertAdjacentHTML('beforeend', `<div class="coverage-cross reveal"><p class="coverage-cross-label">Vous hésitez entre deux univers ?</p>${links}</div>`);
+    }
+    document.querySelectorAll('.coverage-row.reveal, .coverage-cross.reveal').forEach(el => io.observe(el));
 
     if (data && data.faq && data.faq.length) {
       if (coverageFaqWrap) coverageFaqWrap.hidden = false;
