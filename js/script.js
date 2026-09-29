@@ -11,6 +11,13 @@ const CATEGORIES = [
 
 const PROJECTS = [
   {
+    title: 'Coy Production — Film manifeste', category: 'entreprise-marques',
+    client: 'Coy Production · Film manifeste',
+    desc: "Le film manifeste du studio, construit comme une ligne de métro qui relie ses univers : entreprises & marques, personnalités, événementiel. Un récit à la première personne sur les années passées à mettre les autres en valeur avant de lancer Coy Production.",
+    thumb: 'assets/video/coy-manifeste-poster.jpg',
+    videoSrc: 'assets/video/coy-manifeste.mp4',
+  },
+  {
     title: 'Riodesol — Campagne maillots de bain', category: 'entreprise-marques',
     client: 'Entreprise & Marques · Riodesol',
     desc: "Série de visuels de campagne pour la marque de maillots de bain Riodesol, capturée en lumière naturelle de fin de journée pour un rendu solaire et éditorial.",
