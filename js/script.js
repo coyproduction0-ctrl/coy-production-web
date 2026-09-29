@@ -115,6 +115,13 @@ const PROJECTS = [
     thumb: 'assets/img/komodo-croisiere.jpg',
   },
   {
+    title: 'Berry Beats — Aftermovie de soirée', category: 'evenementiel',
+    client: 'Événementiel · Berry Beats',
+    desc: "Aftermovie de la soirée du collectif Berry Beats : captation au cœur de la piste, jeux de néons et montage rythmé sur le set, pour restituer l'énergie de la nuit et donner envie d'être à la prochaine.",
+    thumb: 'assets/video/berry-beats-poster.jpg',
+    videoSrc: 'assets/video/berry-beats.mp4',
+  },
+  {
     title: 'Acalapati — Film de marque', category: 'entreprise-marques',
     client: 'Entreprise & Marques · Acalapati',
     desc: "Film de marque lifestyle pour Acalapati : une esthétique solaire et premium au service de l'univers de la marque, pensée pour ses réseaux et sa communication.",
